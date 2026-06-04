@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | PM TECHNO HUBB</title>
+  <meta name="description" content="About PM TECHNO HUBB — robotics, IoT, electronics & STEM education in Pune." />
+  <link rel="icon" href="images/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Syne:wght@400;600;700;800&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body data-page="about">
+
+<div class="pcb-bg-layer" aria-hidden="true"></div>
+<div class="orb orb1" aria-hidden="true"></div>
+<div class="orb orb2" aria-hidden="true"></div>
+<div class="orb orb3" aria-hidden="true"></div>
+
+<header id="navbar" role="banner">
+  <a href="index.html" class="logo" aria-label="PM TECHNO HUBB Home">
+    <img src="images/logo.png" alt="PM TECHNO HUBB" class="logo-img" width="48" height="48" />
+    <span class="logo-text">PM TECHNO HUBB</span>
+  </a>
+  <nav aria-label="Main navigation">
+    <ul id="nav-menu">
+      <li><a href="index.html" data-nav="home">Home</a></li>
+      <li><a href="about.html" data-nav="about">About</a></li>
+      <li><a href="services.html" data-nav="services">Services</a></li>
+      <li><a href="workshops.html" data-nav="workshops">Workshops</a></li>
+      <li><a href="products.html" data-nav="products">Products</a></li>
+      <li><a href="partnerships.html" data-nav="partnerships">Partnerships</a></li>
+      <li><a href="contact.html" class="nav-cta" data-nav="contact">Contact Us</a></li>
+    </ul>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+
+<main>
+  <section class="page-hero" aria-label="About intro">
+    <div class="hero-content reveal">
+      <img src="images/logo.png" alt="PM TECHNO HUBB" class="hero-logo" width="180" height="180" style="margin-bottom:20px" />
+      <div class="section-label" style="justify-content:center">About Us</div>
+      <h1 class="section-title">About <span class="text-gradient">PM TECHNO HUBB</span></h1>
+      <p class="hero-sub" style="margin-bottom:0">Karvenagar, Pune · We Build Intelligence</p>
+    </div>
+  </section>
+
+  <section id="about" aria-labelledby="about-copy">
+    <div class="section-inner" style="padding:var(--section-pad);max-width:1400px;margin:0 auto;">
+      <div class="about-prose reveal" id="about-copy">
+        <p>PM TECHNO HUBB is a technology education and innovation platform based in Pune, dedicated to empowering students with practical skills in Robotics, IoT, Electronics, Embedded Systems, and STEM learning. We bridge the gap between classroom theory and real-world applications through hands-on workshops, project-based learning, and innovation-driven programs.</p>
+        <p>Our mission is to inspire the next generation of engineers, innovators, and problem-solvers by providing immersive learning experiences that encourage creativity, critical thinking, and technical excellence. Through school partnerships, innovation labs, and industry-relevant training, PM TECHNO HUBB helps students build confidence, develop future-ready skills, and transform ideas into real-world solutions.</p>
+        <p><strong style="color:var(--blue)">At PM TECHNO HUBB, we don't just teach technology—we empower students to build, create, and innovate.</strong></p>
+        <div style="margin-top:28px;text-align:center"><span class="badge-cert">Certified Training Programs</span></div>
+      </div>
+      <div class="about-visual reveal" id="stats-grid" style="max-width:900px;margin:56px auto 0;"></div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="why" aria-labelledby="why-heading">
+    <div class="why-inner" style="padding:0 var(--section-pad) var(--section-pad)">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label" style="justify-content:center">Why PM TECHNO HUBB</div>
+        <h2 id="why-heading" class="section-title">Why Students &amp; Schools <span class="text-gradient">Choose Us</span></h2>
+      </div>
+      <div class="why-grid" id="why-grid"></div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="gallery" aria-labelledby="gallery-heading">
+    <div class="gallery-inner" style="padding:var(--section-pad);max-width:1400px;margin:0 auto;">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label" style="justify-content:center">Our Work</div>
+        <h2 id="gallery-heading" class="section-title">Project <span class="text-gradient">Gallery</span></h2>
+        <p style="color:var(--text-dim);max-width:520px;margin:12px auto 0">Click a project to view more photos.</p>
+      </div>
+      <div class="gallery-bento" id="gallery-bento"></div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer" role="contentinfo"></footer>
+
+<script src="js/data.js"></script>
+<script src="js/render.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/forms.js"></script>
+</body>
+</html>

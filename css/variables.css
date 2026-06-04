@@ -1,0 +1,45 @@
+﻿/* ════════════════════════════════════════════════════════
+   DESIGN TOKENS — Light-on-light-blue theme
+   Primary: Electric Blue / Cyan
+   Background: Very light blue-white (no pure black)
+   Accents: Gold only for certification badges / highlights
+════════════════════════════════════════════════════════ */
+:root {
+  /* Backgrounds — light, airy, techy */
+  --bg:           #F0F6FF;   /* page base — pale blue-white */
+  --bg2:          #E6F0FE;   /* slightly deeper */
+  --bg3:          #D8E9FD;   /* card backgrounds */
+  --bg-nav:       rgba(240,246,255,0.82);
+
+  /* Primary Palette — Electric Blue / Cyan */
+  --blue:         #0070F3;   /* electric blue — primary */
+  --blue2:        #0055C4;   /* deep blue */
+  --cyan:         #00C6FF;   /* bright cyan accent */
+  --cyan2:        #00A8DB;   /* mid cyan */
+
+  /* Text */
+  --text:         #0D1B3E;   /* dark navy — primary text */
+  --text-dim:     #4A6080;   /* dimmed text */
+  --text-muted:   #7A93B8;   /* placeholders, metadata */
+
+  /* Glass — light variant */
+  --glass:        rgba(255,255,255,0.60);
+  --glass-border: rgba(0,112,243,0.12);
+  --glass-hover:  rgba(255,255,255,0.85);
+
+  /* Gold — ONLY for highlight/cert badges */
+  --gold:         #D4A017;
+  --gold-light:   #F0C040;
+  --gold-bg:      rgba(212,160,23,0.10);
+  --gold-border:  rgba(212,160,23,0.28);
+
+  /* Typography */
+  --font-display: 'Orbitron', sans-serif;
+  --font-heading: 'Syne', sans-serif;
+  --font-body:    'Exo 2', sans-serif;
+
+  /* Spacing & radius */
+  --radius:       16px;
+  --radius-sm:    10px;
+  --section-pad:  120px 5%;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | PM TECHNO HUBB</title>
+  <meta name="description" content="Contact PM TECHNO HUBB — Karvenagar, Pune. Phone, email, map & lead form." />
+  <link rel="icon" href="images/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Syne:wght@400;600;700;800&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body data-page="contact">
+
+<div class="pcb-bg-layer" aria-hidden="true"></div>
+<div class="orb orb1" aria-hidden="true"></div>
+<div class="orb orb2" aria-hidden="true"></div>
+<div class="orb orb3" aria-hidden="true"></div>
+
+<header id="navbar" role="banner">
+  <a href="index.html" class="logo" aria-label="PM TECHNO HUBB Home">
+    <img src="images/logo.png" alt="PM TECHNO HUBB" class="logo-img" width="48" height="48" />
+    <span class="logo-text">PM TECHNO HUBB</span>
+  </a>
+  <nav aria-label="Main navigation">
+    <ul id="nav-menu">
+      <li><a href="index.html" data-nav="home">Home</a></li>
+      <li><a href="about.html" data-nav="about">About</a></li>
+      <li><a href="services.html" data-nav="services">Services</a></li>
+      <li><a href="workshops.html" data-nav="workshops">Workshops</a></li>
+      <li><a href="products.html" data-nav="products">Products</a></li>
+      <li><a href="partnerships.html" data-nav="partnerships">Partnerships</a></li>
+      <li><a href="contact.html" class="nav-cta" data-nav="contact">Contact Us</a></li>
+    </ul>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+
+<main>
+  <section class="page-hero" aria-label="Contact intro">
+    <div class="hero-content reveal">
+      <div class="section-label" style="justify-content:center">Get In Touch</div>
+      <h1 class="section-title">Contact <span class="text-gradient">PM TECHNO HUBB</span></h1>
+      <p class="hero-sub" style="margin-bottom:0">Karvenagar, Pune — we'd love to hear from students, schools &amp; businesses.</p>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="contact-inner">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item reveal"><div class="contact-item-icon">📞</div><div><div class="contact-item-label">Phone</div><div class="contact-item-value"><a href="tel:+919021800883">+91 9021800883</a></div></div></div>
+          <div class="contact-item reveal reveal-delay-1"><div class="contact-item-icon">✉️</div><div><div class="contact-item-label">Email</div><div class="contact-item-value"><a href="mailto:pmtechnohub@gmail.com">pmtechnohub@gmail.com</a></div></div></div>
+          <div class="contact-item reveal reveal-delay-2"><div class="contact-item-icon">📸</div><div><div class="contact-item-label">Instagram</div><div class="contact-item-value"><a href="https://instagram.com/pmtechnohubb" target="_blank" rel="noopener">@pmtechnohubb</a></div></div></div>
+          <div class="contact-item reveal reveal-delay-3"><div class="contact-item-icon">📍</div><div><div class="contact-item-label">Location</div><div class="contact-item-value"><a href="https://maps.app.goo.gl/XvjBEcS1RpoRpRNu6" target="_blank" rel="noopener noreferrer">Karvenagar, Pune 411052</a></div></div></div>
+          <div class="map-container reveal"><iframe src="https://maps.google.com/maps?q=Karvenagar+Pune+Maharashtra&z=15&output=embed" width="100%" height="220" style="border:0;border-radius:14px" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="PM TECHNO HUBB on Google Maps"></iframe></div>
+          <p style="margin-top:12px;font-size:13px" class="reveal"><a href="https://maps.app.goo.gl/XvjBEcS1RpoRpRNu6" target="_blank" rel="noopener noreferrer" style="color:var(--blue)">Open in Google Maps →</a></p>
+        </div>
+        <div class="contact-form reveal reveal-delay-2">
+          <h3>Send Us a Message</h3>
+          <div id="formSuccess" class="form-success"><div class="success-icon">✅</div><p style="font-size:20px;font-weight:800;font-family:var(--font-heading)">Message Sent!</p><p style="color:var(--text-dim)">We'll get back within 24 hours.</p></div>
+          <form id="contactForm" onsubmit="handleContact(event)">
+            <div class="form-row">
+              <div class="form-group"><label for="cName">Name</label><input type="text" id="cName" required /></div>
+              <div class="form-group"><label for="cEmail">Email</label><input type="email" id="cEmail" required /></div>
+            </div>
+            <div class="form-group"><label for="cPhone">Phone</label><input type="tel" id="cPhone" /></div>
+            <div class="form-group"><label for="cMessage">Message</label><textarea id="cMessage" rows="5" required></textarea></div>
+            <button type="submit" class="btn-send"><span>Send Message</span></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer" role="contentinfo"></footer>
+
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+<script src="js/forms.js"></script>
+</body>
+</html>
