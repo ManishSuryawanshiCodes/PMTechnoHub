@@ -1,0 +1,2051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PM TECHNO HUBB | IoT Solutions & Robotics Workshops in Pune</title>
+
+  <!-- ── SEO Meta ──────────────────────────────────────────── -->
+  <meta name="description" content="PM TECHNO HUBB – Leading IoT Solutions & Robotics Workshops in Pune, Maharashtra. Expert-led STEM programs, hands-on Arduino, AI, and Embedded Systems training for students and schools." />
+  <meta name="keywords" content="IoT solutions Pune, robotics workshop Pune, STEM education Pune, Arduino workshop Pune, ESP32 training, AI workshop Pune, Karvenagar Pune tech hub, school STEM programs, PM TECHNO HUBB" />
+  <meta name="author" content="PM TECHNO HUBB" />
+  <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="IN-MH" />
+  <meta name="geo.placename" content="Pune, Maharashtra" />
+  <meta name="geo.position" content="18.4967;73.8095" />
+  <meta name="ICBM" content="18.4967, 73.8095" />
+  <link rel="canonical" href="https://pmtechnohub.com/" />
+
+  <!-- ── Open Graph ────────────────────────────────────────── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pmtechnohub.com/" />
+  <meta property="og:title" content="PM TECHNO HUBB | IoT Solutions & Robotics Workshops in Pune" />
+  <meta property="og:description" content="Bridging theoretical knowledge and practical skills. Empowering students with hands-on STEM, Robotics, IoT, and AI workshops in Pune." />
+  <meta property="og:image" content="https://pmtechnohub.com/og-image.jpg" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:site_name" content="PM TECHNO HUBB" />
+
+  <!-- ── Twitter Card ───────────────────────────────────────── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PM TECHNO HUBB | Pune IoT & Robotics" />
+  <meta name="twitter:description" content="Hands-on STEM, Robotics, IoT & AI workshops in Pune. Join 100+ students at PM TECHNO HUBB." />
+  <meta name="twitter:image" content="https://pmtechnohub.com/og-image.jpg" />
+
+  <!-- ── Google Search Console ─────────────────────────────── -->
+  <meta name="google-site-verification" content="REPLACE_WITH_YOUR_CODE" />
+
+  <!-- ── Local Business Schema (JSON-LD) ───────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "PM TECHNO HUBB",
+    "description": "IoT Solutions, Robotics & STEM Workshops in Pune, Maharashtra",
+    "url": "https://pmtechnohub.com",
+    "telephone": "+91-9021800883",
+    "email": "pmtechnohub@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Karvenagar",
+      "addressLocality": "Pune",
+      "addressRegion": "Maharashtra",
+      "postalCode": "411052",
+      "addressCountry": "IN"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": "18.4967", "longitude": "73.8095" },
+    "openingHours": "Mo-Sa 09:00-18:00",
+    "sameAs": ["https://www.instagram.com/pmtechnohubb"],
+    "serviceArea": { "@type": "City", "name": "Pune" },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "STEM Workshops & IoT Solutions",
+      "itemListElement": [
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"IoT Smart Speaker Workshop"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Robotics Workshop"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Arduino & ESP32 Workshop"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"AI Tools Workshop"}}
+      ]
+    }
+  }
+  </script>
+
+  <!-- ── GA4 Placeholder ───────────────────────────────────── -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> -->
+
+  <!-- ── Fonts: Orbitron (display) + Syne (headings) + Exo2 (body) ─ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Syne:wght@400;600;700;800&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ════════════════════════════════════════════════════════
+       DESIGN TOKENS — Light-on-light-blue theme
+       Primary: Electric Blue / Cyan
+       Background: Very light blue-white (no pure black)
+       Accents: Gold only for certification badges / highlights
+    ════════════════════════════════════════════════════════ */
+    :root {
+      /* Backgrounds — light, airy, techy */
+      --bg:           #F0F6FF;   /* page base — pale blue-white */
+      --bg2:          #E6F0FE;   /* slightly deeper */
+      --bg3:          #D8E9FD;   /* card backgrounds */
+      --bg-nav:       rgba(240,246,255,0.82);
+
+      /* Primary Palette — Electric Blue / Cyan */
+      --blue:         #0070F3;   /* electric blue — primary */
+      --blue2:        #0055C4;   /* deep blue */
+      --cyan:         #00C6FF;   /* bright cyan accent */
+      --cyan2:        #00A8DB;   /* mid cyan */
+
+      /* Text */
+      --text:         #0D1B3E;   /* dark navy — primary text */
+      --text-dim:     #4A6080;   /* dimmed text */
+      --text-muted:   #7A93B8;   /* placeholders, metadata */
+
+      /* Glass — light variant */
+      --glass:        rgba(255,255,255,0.60);
+      --glass-border: rgba(0,112,243,0.12);
+      --glass-hover:  rgba(255,255,255,0.85);
+
+      /* Gold — ONLY for highlight/cert badges */
+      --gold:         #D4A017;
+      --gold-light:   #F0C040;
+      --gold-bg:      rgba(212,160,23,0.10);
+      --gold-border:  rgba(212,160,23,0.28);
+
+      /* Typography */
+      --font-display: 'Orbitron', sans-serif;
+      --font-heading: 'Syne', sans-serif;
+      --font-body:    'Exo 2', sans-serif;
+
+      /* Spacing & radius */
+      --radius:       16px;
+      --radius-sm:    10px;
+      --section-pad:  120px 5%;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Custom scrollbar (light) ─────────────────────────── */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg2); }
+    ::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 3px; }
+    ::selection { background: rgba(0,112,243,0.15); color: var(--blue2); }
+
+    /* ── Tech grid overlay (very subtle, light version) ────── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image:
+        linear-gradient(rgba(0,112,243,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,112,243,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none; z-index: 0;
+    }
+
+    /* ── Ambient orbs (light pastel) ────────────────────────── */
+    .orb {
+      position: fixed; border-radius: 50%;
+      filter: blur(130px);
+      pointer-events: none; z-index: 0;
+      animation: orbFloat 14s ease-in-out infinite;
+    }
+    .orb1 { width:700px;height:700px;background:rgba(0,198,255,0.12);top:-200px;right:-200px;animation-delay:0s; }
+    .orb2 { width:550px;height:550px;background:rgba(0,112,243,0.09);bottom:5%;left:-150px;animation-delay:-7s; }
+    .orb3 { width:350px;height:350px;background:rgba(0,198,255,0.07);top:50%;left:50%;transform:translate(-50%,-50%);animation-delay:-3.5s; }
+
+    @keyframes orbFloat {
+      0%,100% { transform: translateY(0) scale(1); }
+      50%      { transform: translateY(-35px) scale(1.04); }
+    }
+    .orb3 { animation: orbFloat3 14s ease-in-out infinite -3.5s; }
+    @keyframes orbFloat3 {
+      0%,100% { transform: translate(-50%,-50%) scale(1); }
+      50%      { transform: translate(-50%,-50%) translateY(-20px) scale(1.05); }
+    }
+
+    /* ── Glass card (light) ─────────────────────────────────── */
+    .glass {
+      background: var(--glass);
+      backdrop-filter: blur(20px) saturate(160%);
+      -webkit-backdrop-filter: blur(20px) saturate(160%);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius);
+    }
+    .glass-blue {
+      background: rgba(255,255,255,0.70);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(0,112,243,0.18);
+      border-radius: var(--radius);
+    }
+
+    /* ── Section helpers ────────────────────────────────────── */
+    section { position: relative; z-index: 1; }
+    .section-inner { max-width: 1400px; margin: 0 auto; }
+
+    .section-label {
+      font-family: var(--font-display);
+      font-size: 10.5px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 14px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .section-label::before {
+      content: '';
+      width: 30px; height: 1.5px;
+      background: linear-gradient(90deg, var(--blue), var(--cyan));
+      flex-shrink: 0;
+    }
+
+    /* Syne section titles */
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 800;
+      line-height: 1.18;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    /* Gradient text — blue/cyan */
+    .text-gradient {
+      background: linear-gradient(90deg, var(--blue), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    /* Gold gradient — ONLY for cert/highlight use */
+    .text-gold {
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ── Divider ────────────────────────────────────────────── */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0,112,243,0.18), rgba(0,198,255,0.18), transparent);
+      margin: 0 5%;
+    }
+
+    /* ── Scroll reveal ──────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 0.7s cubic-bezier(.22,1,.36,1), transform 0.7s cubic-bezier(.22,1,.36,1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ── Card lift (from V2) ────────────────────────────────── */
+    .card-lift {
+      transition: transform 0.35s cubic-bezier(.22,1,.36,1),
+                  box-shadow 0.35s cubic-bezier(.22,1,.36,1),
+                  border-color 0.35s ease;
+    }
+    .card-lift:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 24px 60px rgba(0,112,243,0.13), 0 0 0 1px rgba(0,198,255,0.22);
+      border-color: rgba(0,198,255,0.30) !important;
+    }
+
+    /* ════════════════════════════════════════════════════════
+       NAVBAR
+    ════════════════════════════════════════════════════════ */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 0 5%; height: 72px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: transparent;
+      transition: all 0.4s ease;
+    }
+    #navbar.scrolled {
+      background: var(--bg-nav);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid rgba(0,112,243,0.14);
+      box-shadow: 0 4px 32px rgba(0,112,243,0.08);
+    }
+
+    .logo {
+      display: flex; align-items: center; gap: 12px;
+      text-decoration: none;
+    }
+    .logo-icon {
+      width: 42px; height: 42px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 18px rgba(0,198,255,0.35);
+      animation: logoPulse 3s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+    .logo-icon svg { width: 22px; height: 22px; }
+    @keyframes logoPulse {
+      0%,100% { box-shadow: 0 0 18px rgba(0,198,255,0.35); }
+      50%      { box-shadow: 0 0 32px rgba(0,112,243,0.50); }
+    }
+    .logo-text {
+      font-family: var(--font-display);
+      font-size: 14px; font-weight: 700;
+      letter-spacing: 1.5px;
+      background: linear-gradient(90deg, var(--blue2), var(--blue), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    nav ul { display: flex; gap: 6px; list-style: none; align-items: center; }
+    nav ul a {
+      display: block;
+      padding: 8px 14px;
+      font-family: var(--font-heading);
+      font-size: 12.5px; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--text-dim);
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+    nav ul a::after {
+      content: ''; position: absolute;
+      bottom: 2px; left: 50%;
+      width: 0; height: 1.5px;
+      background: linear-gradient(90deg, var(--blue), var(--cyan));
+      transform: translateX(-50%);
+      transition: width 0.3s ease;
+    }
+    nav ul a:hover { color: var(--blue); }
+    nav ul a:hover::after { width: 60%; }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--blue2), var(--blue)) !important;
+      color: #fff !important;
+      font-weight: 700 !important;
+      padding: 9px 22px !important;
+      border-radius: 8px !important;
+      box-shadow: 0 0 18px rgba(0,112,243,0.28);
+      transition: all 0.3s ease !important;
+    }
+    .nav-cta:hover {
+      box-shadow: 0 0 32px rgba(0,112,243,0.5) !important;
+      transform: translateY(-1px);
+    }
+    .nav-cta::after { display: none !important; }
+
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 8px;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: var(--blue); border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+    @media (max-width: 900px) {
+      nav ul {
+        display: none; flex-direction: column;
+        position: absolute; top: 72px; left: 0; right: 0;
+        background: rgba(240,246,255,0.97);
+        padding: 20px; border-bottom: 1px solid rgba(0,112,243,0.12);
+        backdrop-filter: blur(24px);
+        box-shadow: 0 12px 40px rgba(0,112,243,0.10);
+      }
+      nav ul.open { display: flex; }
+      nav ul a { padding: 14px 20px; font-size: 14px; color: var(--text); }
+      .hamburger { display: flex; }
+    }
+
+    /* ════════════════════════════════════════════════════════
+       BUTTONS
+    ════════════════════════════════════════════════════════ */
+    .btn-primary, .btn-secondary {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 15px 34px;
+      border-radius: 50px;
+      font-family: var(--font-display);
+      font-size: 12.5px; font-weight: 600;
+      letter-spacing: 1.2px; text-transform: uppercase;
+      cursor: pointer; text-decoration: none;
+      transition: all 0.3s ease;
+      position: relative; overflow: hidden; border: none;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--blue2), var(--blue));
+      color: #fff;
+      box-shadow: 0 0 28px rgba(0,112,243,0.35);
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 52px rgba(0,112,243,0.55);
+    }
+    .btn-secondary {
+      background: var(--glass);
+      color: var(--blue);
+      border: 1.5px solid rgba(0,112,243,0.28) !important;
+      backdrop-filter: blur(10px);
+    }
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+      background: rgba(0,112,243,0.08);
+      box-shadow: 0 0 36px rgba(0,198,255,0.2);
+      border-color: rgba(0,198,255,0.45) !important;
+    }
+    /* Gold CTA — only for certifications/partnership */
+    .btn-gold {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 15px 34px; border-radius: 50px;
+      font-family: var(--font-display);
+      font-size: 12.5px; font-weight: 700;
+      letter-spacing: 1.2px; text-transform: uppercase;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: #1a0e00; cursor: pointer; text-decoration: none;
+      border: none;
+      box-shadow: 0 0 22px rgba(212,160,23,0.30);
+      transition: all 0.3s ease;
+    }
+    .btn-gold:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 44px rgba(212,160,23,0.50);
+    }
+
+    /* ════════════════════════════════════════════════════════
+       HERO SECTION
+    ════════════════════════════════════════════════════════ */
+    #hero {
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      padding: 140px 5% 80px;
+      overflow: hidden;
+      background: radial-gradient(ellipse 65% 55% at 55% 40%, rgba(0,198,255,0.10) 0%, transparent 65%),
+                  radial-gradient(ellipse 50% 40% at 10% 70%, rgba(0,112,243,0.07) 0%, transparent 60%),
+                  var(--bg);
+    }
+
+    /* Floating tech chips — light version */
+    .hero-floating { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+    .float-chip {
+      position: absolute;
+      background: rgba(255,255,255,0.65);
+      border: 1px solid rgba(0,112,243,0.15);
+      border-radius: 12px;
+      padding: 9px 16px;
+      font-size: 12px;
+      color: var(--text-dim);
+      font-family: var(--font-display);
+      letter-spacing: 1px;
+      backdrop-filter: blur(12px);
+      animation: floatChip linear infinite;
+      opacity: 0; white-space: nowrap;
+      box-shadow: 0 4px 16px rgba(0,112,243,0.08);
+    }
+    .float-chip.blue  { border-color: rgba(0,112,243,0.28); color: var(--blue); }
+    .float-chip.cyan  { border-color: rgba(0,198,255,0.30); color: var(--cyan2); }
+    @keyframes floatChip {
+      0%   { opacity:0; transform: translateY(0) rotate(var(--rot)); }
+      10%  { opacity:1; }
+      90%  { opacity:1; }
+      100% { opacity:0; transform: translateY(-100vh) rotate(calc(var(--rot) + 18deg)); }
+    }
+
+    .hero-content { position: relative; z-index: 2; max-width: 920px; }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 9px;
+      background: rgba(0,112,243,0.07);
+      border: 1px solid rgba(0,112,243,0.22);
+      border-radius: 50px;
+      padding: 8px 22px;
+      font-size: 11.5px; letter-spacing: 2.5px; text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 30px;
+      font-family: var(--font-display);
+      animation: fadeUp 0.8s ease forwards; opacity: 0;
+    }
+    .badge-dot {
+      width: 7px; height: 7px;
+      background: var(--blue); border-radius: 50%;
+      animation: badgeBlink 1.6s ease-in-out infinite;
+    }
+    @keyframes badgeBlink {
+      0%,100% { opacity:1; transform: scale(1); }
+      50%      { opacity:0.25; transform: scale(0.6); }
+    }
+
+    h1.hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 6vw, 74px);
+      font-weight: 900; line-height: 1.08;
+      margin-bottom: 24px;
+      animation: fadeUp 0.8s 0.2s ease forwards; opacity: 0;
+    }
+    .title-line1 { display: block; color: var(--text); }
+    .title-line2 {
+      display: block;
+      background: linear-gradient(90deg, var(--blue), var(--cyan), var(--blue));
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite, fadeUp 0.8s 0.2s ease forwards;
+    }
+    @keyframes shimmer { to { background-position: 200% center; } }
+
+    .hero-sub {
+      font-family: var(--font-heading);
+      font-size: clamp(16px, 2vw, 20px);
+      color: var(--text-dim);
+      margin-bottom: 44px; font-weight: 400; line-height: 1.7;
+      animation: fadeUp 0.8s 0.4s ease forwards; opacity: 0;
+    }
+
+    .hero-btns {
+      display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+      animation: fadeUp 0.8s 0.6s ease forwards; opacity: 0;
+    }
+
+    /* Trust indicators below CTAs */
+    .hero-trust {
+      display: flex; justify-content: center; flex-wrap: wrap; gap: 24px;
+      margin-top: 52px;
+      animation: fadeUp 0.8s 0.8s ease forwards; opacity: 0;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 8px;
+      font-family: var(--font-heading);
+      font-size: 12.5px; font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+    }
+    .trust-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+    }
+
+    /* Scroll indicator */
+    .hero-scroll {
+      position: absolute; bottom: 40px; left: 50%;
+      transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      opacity: 0.45;
+      animation: scrollBounce 2s ease-in-out infinite;
+    }
+    .hero-scroll span {
+      font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--blue); font-family: var(--font-display);
+    }
+    .scroll-line { width: 1px; height: 38px; background: linear-gradient(to bottom, var(--blue), transparent); }
+    @keyframes scrollBounce {
+      0%,100% { transform: translateX(-50%) translateY(0); }
+      50%      { transform: translateX(-50%) translateY(7px); }
+    }
+    @keyframes fadeUp {
+      from { opacity:0; transform: translateY(28px); }
+      to   { opacity:1; transform: translateY(0); }
+    }
+
+    /* ════════════════════════════════════════════════════════
+       ABOUT / STATS
+    ════════════════════════════════════════════════════════ */
+    #about { padding: var(--section-pad); }
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 64px; align-items: center; margin-bottom: 80px;
+    }
+    @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+    .about-text p {
+      font-family: var(--font-body);
+      font-size: 16px; color: var(--text-dim);
+      margin-bottom: 16px; line-height: 1.8;
+    }
+
+    .about-visual { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    .stat-card {
+      background: var(--glass);
+      border: 1px solid rgba(0,112,243,0.14);
+      border-radius: 20px; padding: 32px 22px;
+      text-align: center;
+      backdrop-filter: blur(20px);
+      transition: all 0.4s ease;
+      position: relative; overflow: hidden;
+    }
+    .stat-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, transparent, rgba(0,198,255,0.04));
+      border-radius: 20px;
+    }
+    .stat-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(0,198,255,0.30);
+      box-shadow: 0 20px 56px rgba(0,112,243,0.12);
+    }
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 4vw, 50px);
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stat-label {
+      font-family: var(--font-heading);
+      font-size: 12px; color: var(--text-dim);
+      letter-spacing: 0.8px; margin-top: 7px; font-weight: 600;
+    }
+
+    /* ════════════════════════════════════════════════════════
+       WHAT WE OFFER
+    ════════════════════════════════════════════════════════ */
+    #offer {
+      padding: var(--section-pad);
+      background: linear-gradient(180deg, transparent, rgba(0,112,243,0.03), transparent);
+    }
+    .offer-inner { max-width: 1400px; margin: 0 auto; }
+    .offer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px; margin-top: 56px;
+    }
+    .offer-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px; padding: 34px 26px;
+      backdrop-filter: blur(20px);
+      position: relative; overflow: hidden;
+      transition: all 0.4s cubic-bezier(.22,1,.36,1);
+    }
+    .offer-card::before {
+      content: ''; position: absolute;
+      top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+      opacity: 0; transition: opacity 0.4s;
+    }
+    .offer-card::after {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at top left, rgba(var(--accent-rgb),0.06), transparent 60%);
+      opacity: 0; transition: opacity 0.4s;
+    }
+    .offer-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(0,198,255,0.22);
+      box-shadow: 0 24px 60px rgba(0,112,243,0.10);
+    }
+    .offer-card:hover::before, .offer-card:hover::after { opacity:1; }
+    .offer-card.blue-accent  { --accent-color: var(--blue);  --accent-rgb: 0,112,243; }
+    .offer-card.cyan-accent  { --accent-color: var(--cyan);  --accent-rgb: 0,198,255; }
+
+    .offer-icon {
+      width: 54px; height: 54px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 22px; font-size: 26px;
+    }
+    .blue-accent .offer-icon  { background: rgba(0,112,243,0.10); box-shadow: 0 0 18px rgba(0,112,243,0.12); }
+    .cyan-accent .offer-icon  { background: rgba(0,198,255,0.10); box-shadow: 0 0 18px rgba(0,198,255,0.12); }
+
+    .offer-card h3 {
+      font-family: var(--font-heading);
+      font-size: 16px; font-weight: 700;
+      margin-bottom: 11px; color: var(--text);
+      letter-spacing: 0.02em;
+    }
+    .offer-card p { font-size: 14px; color: var(--text-dim); line-height: 1.75; }
+    .offer-tag {
+      display: inline-block; margin-top: 18px;
+      padding: 5px 13px; border-radius: 50px;
+      font-size: 10.5px; letter-spacing: 1px;
+      font-family: var(--font-display);
+    }
+    .blue-accent .offer-tag  { background: rgba(0,112,243,0.09); color: var(--blue);  border: 1px solid rgba(0,112,243,0.22); }
+    .cyan-accent .offer-tag  { background: rgba(0,198,255,0.09); color: var(--cyan2); border: 1px solid rgba(0,198,255,0.22); }
+
+    /* ════════════════════════════════════════════════════════
+       WORKSHOPS
+    ════════════════════════════════════════════════════════ */
+    #workshops { padding: var(--section-pad); }
+    .workshops-inner { max-width: 1400px; margin: 0 auto; }
+    .workshop-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px; margin-top: 56px;
+    }
+    .workshop-card {
+      background: var(--glass);
+      border: 1px solid rgba(0,112,243,0.14);
+      border-radius: 20px; padding: 34px 26px;
+      backdrop-filter: blur(20px);
+      transition: all 0.4s ease;
+      position: relative; overflow: hidden;
+      display: flex; flex-direction: column;
+    }
+    .workshop-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(0,198,255,0.28);
+      box-shadow: 0 28px 72px rgba(0,112,243,0.12), 0 0 40px rgba(0,198,255,0.06);
+    }
+    .ws-duration {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(0,112,243,0.07);
+      border: 1px solid rgba(0,112,243,0.18);
+      border-radius: 50px;
+      padding: 5px 14px; font-size: 10.5px;
+      color: var(--blue); font-family: var(--font-display);
+      letter-spacing: 1px; margin-bottom: 18px; width: fit-content;
+    }
+    .workshop-card h3 {
+      font-family: var(--font-heading);
+      font-size: 17px; font-weight: 700;
+      margin-bottom: 16px; color: var(--text);
+    }
+    .ws-topics { list-style: none; margin-bottom: 26px; flex: 1; }
+    .ws-topics li {
+      font-size: 13px; color: var(--text-dim);
+      padding: 6px 0 6px 20px; position: relative;
+      font-family: var(--font-body);
+    }
+    .ws-topics li::before {
+      content: '▸'; position: absolute; left: 0;
+      color: var(--blue); font-size: 10px; top: 7px;
+    }
+    .ws-register {
+      display: block; width: 100%; padding: 14px;
+      background: linear-gradient(135deg, rgba(0,112,243,0.12), rgba(0,198,255,0.12));
+      border: 1.5px solid rgba(0,112,243,0.28);
+      border-radius: 12px; color: var(--blue);
+      font-family: var(--font-display);
+      font-size: 11.5px; font-weight: 700;
+      letter-spacing: 1.2px; text-align: center;
+      cursor: pointer; text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+    .ws-register:hover {
+      background: linear-gradient(135deg, rgba(0,112,243,0.22), rgba(0,198,255,0.22));
+      box-shadow: 0 0 28px rgba(0,112,243,0.22);
+      transform: translateY(-2px); color: var(--blue2);
+    }
+
+    /* OPEN BADGE (V2 style) — cyan pill */
+    .badge-open {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 4px 12px; border-radius: 100px;
+      background: rgba(0,198,255,0.09);
+      border: 1px solid rgba(0,198,255,0.28);
+      color: var(--cyan2);
+      margin-bottom: 14px;
+    }
+    .badge-open::before {
+      content: ''; width: 6px; height: 6px;
+      border-radius: 50%; background: var(--cyan);
+      animation: badgeBlink 2s infinite;
+    }
+
+    /* ════════════════════════════════════════════════════════
+       MODAL (workshop registration)
+    ════════════════════════════════════════════════════════ */
+    .modal-overlay {
+      position: fixed; inset: 0;
+      background: rgba(13,27,62,0.60);
+      z-index: 9999;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    .modal-overlay.active { opacity: 1; pointer-events: all; }
+    .modal {
+      background: var(--bg);
+      border: 1px solid rgba(0,198,255,0.22);
+      border-radius: 24px; padding: 48px 40px;
+      width: 92%; max-width: 500px;
+      transform: translateY(28px) scale(0.96);
+      transition: transform 0.35s cubic-bezier(.22,1,.36,1);
+      position: relative;
+      box-shadow: 0 32px 80px rgba(0,112,243,0.18);
+    }
+    .modal-overlay.active .modal { transform: translateY(0) scale(1); }
+    .modal-close {
+      position: absolute; top: 18px; right: 18px;
+      background: rgba(0,112,243,0.08); border: 1px solid rgba(0,112,243,0.18);
+      color: var(--text-dim); font-size: 22px;
+      cursor: pointer; transition: all 0.3s;
+      width: 36px; height: 36px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 50%;
+    }
+    .modal-close:hover { color: var(--blue); background: rgba(0,112,243,0.14); }
+    .modal h3 {
+      font-family: var(--font-heading);
+      font-size: 22px; font-weight: 800;
+      margin-bottom: 8px; color: var(--blue);
+    }
+    .modal p { color: var(--text-dim); font-size: 14px; margin-bottom: 26px; }
+    .modal form { display: flex; flex-direction: column; gap: 13px; }
+    .modal input, .modal select {
+      background: rgba(0,112,243,0.04);
+      border: 1px solid rgba(0,112,243,0.15);
+      border-radius: 10px; padding: 13px 16px;
+      color: var(--text); font-family: var(--font-body);
+      font-size: 14px; outline: none;
+      transition: border-color 0.3s;
+    }
+    .modal input:focus, .modal select:focus { border-color: var(--cyan); }
+    .modal input::placeholder { color: var(--text-muted); }
+    .modal select option { background: var(--bg); color: var(--text); }
+
+    /* ════════════════════════════════════════════════════════
+       SCHOOL PARTNERSHIPS
+    ════════════════════════════════════════════════════════ */
+    #schools {
+      padding: var(--section-pad);
+      background: linear-gradient(135deg, rgba(0,112,243,0.03), rgba(0,198,255,0.03));
+    }
+    .schools-inner { max-width: 1400px; margin: 0 auto; }
+    .schools-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 64px; align-items: center; margin-top: 56px;
+    }
+    @media (max-width: 768px) { .schools-grid { grid-template-columns: 1fr; } }
+
+    .schools-pillars { display: flex; flex-direction: column; gap: 18px; }
+    .pillar {
+      display: flex; gap: 20px; align-items: flex-start;
+      background: var(--glass);
+      border: 1px solid rgba(0,112,243,0.13);
+      border-radius: 16px; padding: 24px;
+      backdrop-filter: blur(16px);
+      transition: all 0.3s ease;
+    }
+    .pillar:hover { border-color: rgba(0,198,255,0.28); transform: translateX(5px); }
+    .pillar-icon { font-size: 28px; min-width: 44px; }
+    .pillar h4 {
+      font-family: var(--font-heading);
+      font-size: 14px; font-weight: 700;
+      margin-bottom: 6px; color: var(--blue);
+    }
+    .pillar p { font-size: 13px; color: var(--text-dim); }
+
+    /* Partnership CTA box — uses GOLD for premium institutional feel */
+    .schools-cta-box {
+      background: var(--glass);
+      border: 1.5px solid var(--gold-border);
+      border-radius: 24px; padding: 48px 38px;
+      text-align: center; backdrop-filter: blur(20px);
+      box-shadow: 0 0 40px rgba(212,160,23,0.06);
+    }
+    .schools-cta-box h3 {
+      font-family: var(--font-heading);
+      font-size: 24px; font-weight: 800; margin-bottom: 14px;
+      color: var(--text);
+    }
+    .schools-cta-box p { color: var(--text-dim); margin-bottom: 30px; font-size: 15px; }
+
+    /* ════════════════════════════════════════════════════════
+       WHY CHOOSE
+    ════════════════════════════════════════════════════════ */
+    #why { padding: var(--section-pad); }
+    .why-inner { max-width: 1400px; margin: 0 auto; }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
+      gap: 18px; margin-top: 56px;
+    }
+    .why-card {
+      background: var(--glass);
+      border: 1px solid rgba(0,112,243,0.12);
+      border-radius: 16px; padding: 26px 22px;
+      backdrop-filter: blur(16px);
+      text-align: center; transition: all 0.4s ease;
+    }
+    .why-card:hover {
+      border-color: rgba(0,198,255,0.30);
+      box-shadow: 0 0 36px rgba(0,112,243,0.10);
+      transform: translateY(-5px);
+    }
+    .why-icon { font-size: 30px; margin-bottom: 14px; }
+    .why-card h4 {
+      font-family: var(--font-heading);
+      font-size: 12.5px; font-weight: 700;
+      letter-spacing: 0.04em; color: var(--text);
+    }
+    /* Certification card gets gold treatment */
+    .why-card.cert-card {
+      border-color: var(--gold-border);
+      background: var(--gold-bg);
+    }
+    .why-card.cert-card:hover {
+      border-color: rgba(212,160,23,0.50);
+      box-shadow: 0 0 36px rgba(212,160,23,0.10);
+    }
+    .why-card.cert-card h4 { color: var(--gold); }
+
+    /* ════════════════════════════════════════════════════════
+       GALLERY
+    ════════════════════════════════════════════════════════ */
+    #gallery {
+      padding: var(--section-pad);
+      background: linear-gradient(180deg, transparent, rgba(0,112,243,0.03), transparent);
+    }
+    .gallery-inner { max-width: 1400px; margin: 0 auto; }
+    .masonry { columns: 3; column-gap: 16px; margin-top: 56px; }
+    @media (max-width: 900px) { .masonry { columns: 2; } }
+    @media (max-width: 600px) { .masonry { columns: 1; } }
+    .masonry-item {
+      break-inside: avoid; margin-bottom: 16px;
+      border-radius: 14px; overflow: hidden;
+      position: relative; cursor: pointer;
+      border: 1px solid rgba(0,112,243,0.10);
+      transition: border-color 0.3s;
+    }
+    .masonry-item:hover { border-color: rgba(0,198,255,0.30); }
+    .masonry-placeholder {
+      width: 100%; display: block; border-radius: 14px;
+      transition: transform 0.5s ease;
+      background: linear-gradient(135deg, rgba(0,112,243,0.07), rgba(0,198,255,0.07));
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 10px; color: var(--text-dim); font-size: 13px;
+    }
+    .masonry-item .overlay {
+      position: absolute; inset: 0;
+      background: rgba(0,112,243,0);
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.3s; border-radius: 14px;
+    }
+    .masonry-item:hover .overlay { background: rgba(0,50,150,0.28); }
+    .overlay-icon { font-size: 36px; opacity: 0; transition: opacity 0.3s; }
+    .masonry-item:hover .overlay-icon { opacity: 1; }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed; inset: 0;
+      background: rgba(13,27,62,0.88);
+      z-index: 9998;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s;
+      backdrop-filter: blur(18px);
+    }
+    .lightbox.active { opacity: 1; pointer-events: all; }
+    .lightbox-content {
+      max-width: 90vw; max-height: 80vh;
+      border-radius: 16px; overflow: hidden;
+      border: 1px solid rgba(0,198,255,0.25);
+    }
+    .lightbox-close {
+      position: fixed; top: 24px; right: 24px;
+      background: rgba(255,255,255,0.90);
+      border: 1px solid rgba(0,112,243,0.25);
+      color: var(--blue); font-size: 26px;
+      width: 48px; height: 48px; border-radius: 50%;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: all 0.3s;
+    }
+    .lightbox-close:hover { background: var(--blue); color: #fff; }
+
+    /* ════════════════════════════════════════════════════════
+       TESTIMONIALS
+    ════════════════════════════════════════════════════════ */
+    #reviews { padding: var(--section-pad); }
+    .reviews-inner { max-width: 1400px; margin: 0 auto; }
+    .slider-wrapper { overflow: hidden; margin-top: 56px; position: relative; }
+    .slider-track {
+      display: flex; gap: 22px;
+      transition: transform 0.6s cubic-bezier(.22,1,.36,1);
+    }
+    .review-card {
+      min-width: calc(33.33% - 16px);
+      background: var(--glass);
+      border: 1px solid rgba(0,112,243,0.13);
+      border-radius: 20px; padding: 34px;
+      backdrop-filter: blur(20px); flex-shrink: 0;
+      position: relative;
+    }
+    .review-quote {
+      font-family: var(--font-heading);
+      font-size: 52px; font-weight: 800;
+      color: rgba(0,112,243,0.15);
+      line-height: 1; margin-bottom: -10px;
+    }
+    .review-stars { color: var(--gold); font-size: 15px; margin-bottom: 14px; letter-spacing: 2px; }
+    .review-text { font-size: 14.5px; color: var(--text-dim); line-height: 1.78; margin-bottom: 22px; font-style: italic; }
+    .review-author { display: flex; align-items: center; gap: 14px; }
+    .review-avatar {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-size: 13px;
+      font-weight: 700; color: #fff; flex-shrink: 0;
+    }
+    .review-name { font-family: var(--font-heading); font-size: 14px; font-weight: 700; color: var(--text); }
+    .review-role { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+    .slider-dots { display: flex; justify-content: center; gap: 8px; margin-top: 32px; }
+    .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: rgba(0,112,243,0.22); cursor: pointer;
+      transition: all 0.3s ease; border: none;
+    }
+    .dot.active { background: var(--blue); width: 22px; border-radius: 4px; }
+    @media (max-width: 900px) { .review-card { min-width: calc(50% - 12px); } }
+    @media (max-width: 600px) { .review-card { min-width: 100%; } }
+
+    /* ════════════════════════════════════════════════════════
+       CONTACT
+    ════════════════════════════════════════════════════════ */
+    #contact { padding: var(--section-pad); }
+    .contact-inner { max-width: 1400px; margin: 0 auto; }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1.2fr;
+      gap: 56px; margin-top: 56px; align-items: start;
+    }
+    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+    .contact-info { display: flex; flex-direction: column; gap: 14px; }
+    .contact-item {
+      display: flex; gap: 16px; align-items: flex-start;
+      background: var(--glass);
+      border: 1px solid rgba(0,112,243,0.12);
+      border-radius: 14px; padding: 18px 20px;
+      backdrop-filter: blur(16px); transition: all 0.3s;
+    }
+    .contact-item:hover { border-color: rgba(0,198,255,0.24); }
+    .contact-item-icon {
+      width: 42px; height: 42px;
+      background: rgba(0,112,243,0.09);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 19px; flex-shrink: 0;
+    }
+    .contact-item-label {
+      font-size: 11px; color: var(--text-muted);
+      margin-bottom: 3px;
+      font-family: var(--font-display); letter-spacing: 1.2px; text-transform: uppercase;
+    }
+    .contact-item-value { font-size: 14.5px; color: var(--text); font-weight: 500; }
+    .contact-item-value a { color: var(--blue); text-decoration: none; }
+    .contact-item-value a:hover { color: var(--cyan2); }
+
+    .map-container { border-radius: 14px; overflow: hidden; height: 200px; margin-top: 22px; }
+
+    .contact-form {
+      background: var(--glass);
+      border: 1px solid rgba(0,112,243,0.14);
+      border-radius: 24px; padding: 46px 38px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 8px 40px rgba(0,112,243,0.08);
+    }
+    @media (max-width: 600px) { .contact-form { padding: 30px 22px; } }
+    .contact-form h3 {
+      font-family: var(--font-heading);
+      font-size: 22px; font-weight: 800; margin-bottom: 30px; color: var(--text);
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+    .form-group { display: flex; flex-direction: column; gap: 7px; margin-bottom: 14px; }
+    .form-group label {
+      font-size: 11px; color: var(--text-muted);
+      letter-spacing: 1.2px; font-family: var(--font-display); text-transform: uppercase;
+    }
+    .form-group input, .form-group textarea {
+      background: rgba(0,112,243,0.04);
+      border: 1px solid rgba(0,112,243,0.13);
+      border-radius: 12px; padding: 13px 16px;
+      color: var(--text); font-family: var(--font-body);
+      font-size: 14px; outline: none;
+      transition: all 0.3s; resize: none;
+    }
+    .form-group input:focus, .form-group textarea:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 16px rgba(0,198,255,0.12);
+    }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-muted); }
+    .btn-send {
+      width: 100%; padding: 17px;
+      background: linear-gradient(135deg, var(--blue2), var(--blue));
+      border: none; border-radius: 12px;
+      color: #fff; font-family: var(--font-display);
+      font-size: 12.5px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      cursor: pointer; transition: all 0.3s;
+      position: relative; overflow: hidden;
+    }
+    .btn-send::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, var(--cyan2), var(--blue));
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .btn-send:hover::before { opacity: 1; }
+    .btn-send:hover { transform: translateY(-2px); box-shadow: 0 0 36px rgba(0,112,243,0.40); }
+    .btn-send span { position: relative; z-index: 1; }
+    .form-success {
+      display: none; text-align: center; padding: 30px;
+      color: var(--blue); font-family: var(--font-display);
+    }
+    .form-success .success-icon { font-size: 46px; margin-bottom: 14px; }
+
+    /* ════════════════════════════════════════════════════════
+       FOOTER
+    ════════════════════════════════════════════════════════ */
+    footer {
+      background: var(--bg2);
+      border-top: 1px solid rgba(0,112,243,0.12);
+      padding: 80px 5% 0;
+    }
+    .footer-grid {
+      max-width: 1400px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 60px; padding-bottom: 56px;
+    }
+    @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
+    @media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } }
+
+    .footer-brand p { font-size: 14px; color: var(--text-dim); margin-top: 14px; line-height: 1.8; max-width: 260px; }
+    .footer-social { display: flex; gap: 10px; margin-top: 22px; }
+    .social-btn {
+      width: 40px; height: 40px;
+      background: var(--glass);
+      border: 1px solid rgba(0,112,243,0.14);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; text-decoration: none;
+      transition: all 0.3s;
+    }
+    .social-btn:hover {
+      border-color: var(--cyan); box-shadow: 0 0 16px rgba(0,198,255,0.22);
+      transform: translateY(-3px);
+    }
+    .footer-col h5 {
+      font-family: var(--font-display);
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--blue); margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .footer-col ul a { font-size: 14px; color: var(--text-dim); text-decoration: none; transition: color 0.25s; }
+    .footer-col ul a:hover { color: var(--blue); }
+    .newsletter-form { display: flex; gap: 8px; margin-top: 14px; }
+    .newsletter-form input {
+      flex: 1; padding: 11px 14px;
+      background: rgba(0,112,243,0.05);
+      border: 1px solid rgba(0,112,243,0.14);
+      border-radius: 10px; color: var(--text);
+      font-size: 13px; outline: none; transition: border-color 0.3s;
+    }
+    .newsletter-form input:focus { border-color: var(--cyan); }
+    .newsletter-form input::placeholder { color: var(--text-muted); }
+    .newsletter-form button {
+      padding: 11px 18px;
+      background: linear-gradient(135deg, var(--blue), var(--cyan2));
+      border: none; border-radius: 10px;
+      color: #fff; font-size: 16px;
+      cursor: pointer; transition: all 0.3s;
+    }
+    .newsletter-form button:hover { box-shadow: 0 0 16px rgba(0,112,243,0.35); }
+    .footer-bottom {
+      border-top: 1px solid rgba(0,112,243,0.10);
+      max-width: 1400px; margin: 0 auto; padding: 22px 0;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 12px;
+    }
+    .footer-bottom p { font-size: 13px; color: var(--text-muted); }
+    .footer-links { display: flex; gap: 22px; }
+    .footer-links a { font-size: 13px; color: var(--text-muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--blue); }
+
+    /* ════════════════════════════════════════════════════════
+       UTILITIES
+    ════════════════════════════════════════════════════════ */
+    /* Gold-accent certification/highlight badge */
+    .badge-cert {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 10.5px; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 100px;
+      background: var(--gold-bg);
+      border: 1px solid var(--gold-border);
+      color: var(--gold);
+      font-family: var(--font-display);
+    }
+    .badge-cert::before {
+      content: '🏅'; font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Ambient orbs ─────────────────────────────────────────── -->
+<div class="orb orb1" aria-hidden="true"></div>
+<div class="orb orb2" aria-hidden="true"></div>
+<div class="orb orb3" aria-hidden="true"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════════════════════ -->
+<header id="navbar" role="banner">
+  <a href="#hero" class="logo" aria-label="PM TECHNO HUBB Home">
+    <div class="logo-icon" aria-hidden="true">
+      <!-- Globe SVG -->
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="white" stroke-width="1.5"/>
+        <path d="M2 12h20M12 2C9.5 7 9.5 17 12 22M12 2c2.5 5 2.5 15 0 20" stroke="white" stroke-width="1.5"/>
+        <circle cx="12" cy="12" r="2" fill="white"/>
+      </svg>
+    </div>
+    <span class="logo-text">PM TECHNO HUBB</span>
+  </a>
+
+  <nav aria-label="Main navigation">
+    <ul id="nav-menu">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#offer">Services</a></li>
+      <li><a href="#workshops">Workshops</a></li>
+      <li><a href="#schools">Partnerships</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     HERO SECTION
+══════════════════════════════════════════════════════════ -->
+<section id="hero" aria-label="Hero">
+
+  <!-- Floating tech chips (from V1, light palette) -->
+  <div class="hero-floating" aria-hidden="true">
+    <div class="float-chip blue"  style="bottom:10%;left:8%;  --rot:-8deg; animation-duration:18s;animation-delay:0s">ESP32</div>
+    <div class="float-chip cyan"  style="bottom:20%;left:15%; --rot:5deg;  animation-duration:22s;animation-delay:-5s">IoT Sensor</div>
+    <div class="float-chip blue"  style="bottom:5%;right:12%; --rot:10deg; animation-duration:16s;animation-delay:-8s">Arduino Uno</div>
+    <div class="float-chip cyan"  style="bottom:30%;right:8%; --rot:-12deg;animation-duration:20s;animation-delay:-2s">ML Model</div>
+    <div class="float-chip blue"  style="bottom:15%;left:40%; --rot:6deg;  animation-duration:24s;animation-delay:-10s">void loop()</div>
+    <div class="float-chip cyan"  style="bottom:8%;left:55%;  --rot:-4deg; animation-duration:19s;animation-delay:-4s">WiFi.begin()</div>
+    <div class="float-chip blue"  style="bottom:25%;right:30%;--rot:8deg;  animation-duration:21s;animation-delay:-7s">Servo Motor</div>
+    <div class="float-chip cyan"  style="bottom:12%;left:70%; --rot:-6deg; animation-duration:17s;animation-delay:-1s">I2C Protocol</div>
+  </div>
+
+  <div class="hero-content">
+    <!-- Badge -->
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Pune's Premier Tech Learning Hub
+    </div>
+
+    <!-- Headline (V1 Orbitron + V2 large scale) -->
+    <h1 class="hero-title">
+      <span class="title-line1">Innovate. Engineer.</span>
+      <span class="title-line2">Build The Future.</span>
+    </h1>
+
+    <!-- Sub (Syne font from V2) -->
+    <p class="hero-sub">
+      Engineering Solutions &amp; Hands-on STEM Workshops in Pune.<br>
+      Turning students into tomorrow's innovators, one circuit at a time.
+    </p>
+
+    <!-- CTAs -->
+    <div class="hero-btns">
+      <a href="#offer" class="btn-primary">⚡ Explore Services</a>
+      <a href="#workshops" class="btn-secondary">🤖 Join a Workshop</a>
+    </div>
+
+    <!-- Trust indicators (from V2) -->
+    <div class="hero-trust">
+      <span class="trust-item"><span class="trust-dot"></span>100+ Students Trained</span>
+      <span class="trust-item"><span class="trust-dot"></span>50+ Workshops</span>
+      <span class="trust-item"><span class="trust-dot"></span>15+ School Partners</span>
+      <span class="trust-item" style="color:var(--gold);">
+        <span style="width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block;"></span>
+        Certified Programs
+      </span>
+    </div>
+  </div>
+
+  <!-- Scroll indicator (V1) -->
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     ABOUT SECTION
+══════════════════════════════════════════════════════════ -->
+<section id="about" aria-labelledby="about-heading">
+  <div class="section-inner" style="padding: var(--section-pad); max-width:1400px; margin:0 auto;">
+
+    <div class="reveal">
+      <div class="section-label">Our Story</div>
+      <h2 id="about-heading" class="section-title">
+        Bridging Knowledge<br>&amp; <span class="text-gradient">Real-World Skills</span>
+      </h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text reveal reveal-delay-1">
+        <p>At PM TECHNO HUBB, we believe true learning happens when theory meets practice. Located in Karvenagar, Pune, we equip students, schools, and businesses with cutting-edge technology skills.</p>
+        <p>From industrial IoT solutions like the <strong style="color:var(--blue)">Mobico CPM</strong> and <strong style="color:var(--blue)">UV Rakshak</strong> to inspiring robotics workshops for young minds — we bridge the gap between classroom learning and real-world innovation.</p>
+        <p>Our mission: <strong style="color:var(--blue)">empower every student</strong> with practical skills to solve tomorrow's challenges using today's technology.</p>
+        <!-- Gold cert badge (highlight only use) -->
+        <div style="margin-top:28px;">
+          <span class="badge-cert">Certified Training Programs</span>
+        </div>
+      </div>
+
+      <div class="about-visual reveal reveal-delay-2">
+        <div class="stat-card">
+          <div class="stat-number" data-target="100">0</div>
+          <div class="stat-label">Students Trained</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="50">0</div>
+          <div class="stat-label">Workshops Conducted</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-label">Schools Partnered</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="98">0</div>
+          <div class="stat-label">% Satisfaction Rate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     WHAT WE OFFER
+══════════════════════════════════════════════════════════ -->
+<section id="offer" aria-labelledby="offer-heading">
+  <div class="offer-inner">
+    <div class="reveal">
+      <div class="section-label">Our Portfolio</div>
+      <h2 id="offer-heading" class="section-title">
+        Engineering &amp; Tech<br><span class="text-gradient">Solutions We Deliver</span>
+      </h2>
+    </div>
+
+    <div class="offer-grid">
+      <div class="offer-card blue-accent reveal reveal-delay-1">
+        <div class="offer-icon">🏭</div>
+        <h3>Industrial IoT Solutions</h3>
+        <p>Advanced B2B solutions including the Mobico CPM for connected production management and Machine Health Monitoring systems delivering real-time industrial intelligence.</p>
+        <span class="offer-tag">B2B Enterprise</span>
+      </div>
+
+      <div class="offer-card cyan-accent reveal reveal-delay-2">
+        <div class="offer-icon">🛡️</div>
+        <h3>Medical IoT — UV Rakshak</h3>
+        <p>Innovative UV disinfection and protection systems combining IoT intelligence with healthcare safety protocols for modern medical and commercial facilities.</p>
+        <span class="offer-tag">Healthcare Tech</span>
+      </div>
+
+      <div class="offer-card blue-accent reveal reveal-delay-3">
+        <div class="offer-icon">🤖</div>
+        <h3>Robotics Education</h3>
+        <p>Hands-on robotics programs covering mechanical design, motor control, sensor integration, and autonomous navigation — from beginner to advanced levels.</p>
+        <span class="offer-tag">B2C Education</span>
+      </div>
+
+      <div class="offer-card cyan-accent reveal reveal-delay-4">
+        <div class="offer-icon">📡</div>
+        <h3>IoT &amp; Smart Devices</h3>
+        <p>Learn to design and deploy connected devices using WiFi, Bluetooth, and MQTT protocols. Build smart home systems, environmental monitors, and more.</p>
+        <span class="offer-tag">B2C Education</span>
+      </div>
+
+      <div class="offer-card blue-accent reveal reveal-delay-1">
+        <div class="offer-icon">🧠</div>
+        <h3>AI &amp; Emerging Tech</h3>
+        <p>Future-ready programs in Artificial Intelligence, Machine Learning fundamentals, computer vision, and the latest tools reshaping industries worldwide.</p>
+        <span class="offer-tag">AI / ML</span>
+      </div>
+
+      <div class="offer-card cyan-accent reveal reveal-delay-2">
+        <div class="offer-icon">⚙️</div>
+        <h3>Embedded Systems</h3>
+        <p>Deep-dive into microcontrollers, real-time OS, firmware development, and low-level hardware programming with Arduino, ESP32, and STM32.</p>
+        <span class="offer-tag">Embedded Dev</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     WORKSHOPS
+══════════════════════════════════════════════════════════ -->
+<section id="workshops" aria-labelledby="workshops-heading">
+  <div class="workshops-inner">
+    <div class="reveal">
+      <div class="section-label">Featured Programs</div>
+      <h2 id="workshops-heading" class="section-title">
+        Upcoming<br><span class="text-gradient">Workshops</span>
+      </h2>
+    </div>
+
+    <div class="workshop-grid">
+
+      <!-- Workshop 1 -->
+      <div class="workshop-card card-lift reveal reveal-delay-1">
+        <div class="badge-open">Open</div>
+        <div class="ws-duration">⏱ 2 Days · Intensive</div>
+        <h3>IoT Smart Speaker Workshop</h3>
+        <ul class="ws-topics">
+          <li>Voice Recognition Systems</li>
+          <li>Smart Device Programming</li>
+          <li>Wake Word Detection</li>
+          <li>Cloud Integration</li>
+        </ul>
+        <button class="ws-register" onclick="openModal('IoT Smart Speaker Workshop')">Register Now →</button>
+      </div>
+
+      <!-- Workshop 2 -->
+      <div class="workshop-card card-lift reveal reveal-delay-2">
+        <div class="badge-open">Open</div>
+        <div class="ws-duration">⏱ 3 Days · Intensive</div>
+        <h3>Robotics Workshop</h3>
+        <ul class="ws-topics">
+          <li>Robot Design &amp; Fabrication</li>
+          <li>Motor Control Systems</li>
+          <li>Sensor Integration</li>
+          <li>Line Following &amp; Obstacle Avoidance</li>
+        </ul>
+        <button class="ws-register" onclick="openModal('Robotics Workshop')">Register Now →</button>
+      </div>
+
+      <!-- Workshop 3 -->
+      <div class="workshop-card card-lift reveal reveal-delay-3">
+        <div class="badge-open">Open</div>
+        <div class="ws-duration">⏱ 2 Days · Intensive</div>
+        <h3>Arduino &amp; ESP32 Workshop</h3>
+        <ul class="ws-topics">
+          <li>Microcontroller Fundamentals</li>
+          <li>Sensor &amp; Actuator Programming</li>
+          <li>WiFi Projects &amp; Web Servers</li>
+          <li>MQTT &amp; IoT Protocols</li>
+        </ul>
+        <button class="ws-register" onclick="openModal('Arduino &amp; ESP32 Workshop')">Register Now →</button>
+      </div>
+
+      <!-- Workshop 4 -->
+      <div class="workshop-card card-lift reveal reveal-delay-4">
+        <div class="badge-open">Open</div>
+        <div class="ws-duration">⏱ 1 Day · Bootcamp</div>
+        <h3>AI Tools Workshop</h3>
+        <ul class="ws-topics">
+          <li>AI Fundamentals &amp; Use Cases</li>
+          <li>ML Model Basics</li>
+          <li>Practical AI Tools</li>
+          <li>Future of AI in India</li>
+        </ul>
+        <button class="ws-register" onclick="openModal('AI Tools Workshop')">Register Now →</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MODAL (Workshop Registration) -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+    <h3 id="modal-title">Register for Workshop</h3>
+    <p id="modal-subtitle">Secure your spot — limited seats available!</p>
+    <form id="registerForm" onsubmit="handleRegister(event)">
+      <input type="text"  placeholder="Your Full Name"  required aria-label="Full Name" />
+      <input type="email" placeholder="Email Address"   required aria-label="Email" />
+      <input type="tel"   placeholder="Phone Number"    required aria-label="Phone" />
+      <select required aria-label="Select Workshop">
+        <option value="" disabled selected>Select Workshop</option>
+        <option>IoT Smart Speaker Workshop</option>
+        <option>Robotics Workshop</option>
+        <option>Arduino &amp; ESP32 Workshop</option>
+        <option>AI Tools Workshop</option>
+      </select>
+      <button type="submit" class="btn-send" style="margin-top:6px;"><span>Confirm Registration ✓</span></button>
+    </form>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     SCHOOL PARTNERSHIPS
+══════════════════════════════════════════════════════════ -->
+<section id="schools" aria-labelledby="schools-heading">
+  <div class="schools-inner">
+    <div class="reveal">
+      <div class="section-label">School Partnerships</div>
+      <h2 id="schools-heading" class="section-title">
+        Transform Your School Into<br>
+        <span class="text-gradient">An Innovation Hub</span>
+      </h2>
+    </div>
+
+    <div class="schools-grid">
+      <!-- Pillars (V1 structure, V2 typography) -->
+      <div class="schools-pillars">
+        <div class="pillar reveal reveal-delay-1">
+          <div class="pillar-icon">📚</div>
+          <div>
+            <h4>STEM Programs</h4>
+            <p>Age-appropriate, curriculum-aligned programs covering robotics, electronics, coding, and AI — designed for classes 6 through 12.</p>
+          </div>
+        </div>
+        <div class="pillar reveal reveal-delay-2">
+          <div class="pillar-icon">👨‍🏫</div>
+          <div>
+            <h4>Teacher Training</h4>
+            <p>Comprehensive upskilling for educators with hands-on sessions, resource kits, and ongoing expert support to sustain in-school STEM programs.</p>
+          </div>
+        </div>
+        <div class="pillar reveal reveal-delay-3">
+          <div class="pillar-icon">🏫</div>
+          <div>
+            <h4>Innovation Lab Setup</h4>
+            <p>End-to-end setup of fully equipped physical labs with microcontrollers, robotics kits, 3D printers, and all supporting infrastructure.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA box — gold accent (V2 institutional trust feel) -->
+      <div class="schools-cta-box reveal reveal-delay-2">
+        <div style="font-size:52px;margin-bottom:14px;">🏆</div>
+        <h3>Ready to <span class="text-gradient">Partner with Us?</span></h3>
+        <p>Join 15+ schools across Pune that have already transformed their science and technology education with PM TECHNO HUBB.</p>
+        <!-- Gold CTA — partnership/institutional context -->
+        <a href="#contact" class="btn-gold" style="display:inline-flex; margin-top:8px;">
+          📅 Schedule a Meeting
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     WHY CHOOSE
+══════════════════════════════════════════════════════════ -->
+<section id="why" aria-labelledby="why-heading">
+  <div class="why-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label" style="justify-content:center">Why PM TECHNO HUBB</div>
+      <h2 id="why-heading" class="section-title">
+        Why Students &amp; Schools<br><span class="text-gradient">Choose Us</span>
+      </h2>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-icon">🛠️</div>
+        <h4>100% Hands-On Training</h4>
+      </div>
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-icon">🏗️</div>
+        <h4>Real Industry Projects</h4>
+      </div>
+      <div class="why-card reveal reveal-delay-3">
+        <div class="why-icon">🎓</div>
+        <h4>Expert Mentorship</h4>
+      </div>
+      <!-- Certification card uses gold — highlight use only -->
+      <div class="why-card cert-card reveal reveal-delay-4">
+        <div class="why-icon">📜</div>
+        <h4>Certification Programs</h4>
+      </div>
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-icon">🌐</div>
+        <h4>Community Support</h4>
+      </div>
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-icon">📍</div>
+        <h4>Pune-Based Experts</h4>
+      </div>
+      <div class="why-card reveal reveal-delay-3">
+        <div class="why-icon">🔬</div>
+        <h4>Latest Tech Stack</h4>
+      </div>
+      <div class="why-card reveal reveal-delay-4">
+        <div class="why-icon">🚀</div>
+        <h4>Future-Ready Skills</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     GALLERY
+══════════════════════════════════════════════════════════ -->
+<section id="gallery" aria-labelledby="gallery-heading">
+  <div class="gallery-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label" style="justify-content:center">Our Work</div>
+      <h2 id="gallery-heading" class="section-title">
+        Workshop <span class="text-gradient">Gallery</span>
+      </h2>
+    </div>
+    <!-- JS-rendered masonry gallery -->
+    <div class="masonry" id="masonry"></div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close lightbox">&times;</button>
+  <div class="lightbox-content" id="lightboxContent"></div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     TESTIMONIALS
+══════════════════════════════════════════════════════════ -->
+<section id="reviews" aria-labelledby="reviews-heading">
+  <div class="reviews-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label" style="justify-content:center">Testimonials</div>
+      <h2 id="reviews-heading" class="section-title">
+        What Our Students<br><span class="text-gradient">Say About Us</span>
+      </h2>
+    </div>
+
+    <div class="slider-wrapper">
+      <div class="slider-track" id="sliderTrack">
+
+        <div class="review-card">
+          <div class="review-quote">"</div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">The robotics workshop at PM TECHNO HUBB was incredible! I learned so much about practical electronics and circuit design that my college textbooks never taught me.</p>
+          <div class="review-author">
+            <div class="review-avatar">RS</div>
+            <div><div class="review-name">Rahul Sharma</div><div class="review-role">Engineering Student, Pune</div></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">"</div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">We partnered with PM TECHNO HUBB to set up our school's innovation lab and the transformation was remarkable. Students are more engaged than ever before.</p>
+          <div class="review-author">
+            <div class="review-avatar">PP</div>
+            <div><div class="review-name">Priya Patil</div><div class="review-role">Principal, Pune School</div></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">"</div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">The Arduino &amp; ESP32 workshop gave me the confidence to start my own IoT project. I built a smart home dashboard in just 3 weeks after the workshop. Amazing mentors!</p>
+          <div class="review-author">
+            <div class="review-avatar">AK</div>
+            <div><div class="review-name">Arjun Kulkarni</div><div class="review-role">12th Grade Student</div></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">"</div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">PM TECHNO HUBB's IoT solutions transformed our manufacturing floor. The machine health monitoring system saved us significant downtime in the first quarter alone.</p>
+          <div class="review-author">
+            <div class="review-avatar">SM</div>
+            <div><div class="review-name">Suresh Mane</div><div class="review-role">Factory Manager, Pimpri</div></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">"</div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">The AI workshop was a real eye-opener. As a teacher, I gained practical skills I could immediately bring back to my students. The team is passionate and genuinely caring.</p>
+          <div class="review-author">
+            <div class="review-avatar">NJ</div>
+            <div><div class="review-name">Neha Joshi</div><div class="review-role">Computer Science Teacher</div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Testimonial slides"></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     CONTACT SECTION
+══════════════════════════════════════════════════════════ -->
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="contact-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-label" style="justify-content:center">Get In Touch</div>
+      <h2 id="contact-heading" class="section-title">
+        Let's Build Something<br><span class="text-gradient">Amazing Together</span>
+      </h2>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Contact info -->
+      <div class="contact-info">
+        <div class="contact-item reveal reveal-delay-1">
+          <div class="contact-item-icon">📞</div>
+          <div>
+            <div class="contact-item-label">Phone</div>
+            <div class="contact-item-value"><a href="tel:+919021800883">+91 9021800883</a></div>
+          </div>
+        </div>
+        <div class="contact-item reveal reveal-delay-2">
+          <div class="contact-item-icon">✉️</div>
+          <div>
+            <div class="contact-item-label">Email</div>
+            <div class="contact-item-value"><a href="mailto:pmtechnohub@gmail.com">pmtechnohub@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="contact-item reveal reveal-delay-3">
+          <div class="contact-item-icon">📸</div>
+          <div>
+            <div class="contact-item-label">Instagram</div>
+            <div class="contact-item-value"><a href="https://instagram.com/pmtechnohubb" target="_blank" rel="noopener">@pmtechnohubb</a></div>
+          </div>
+        </div>
+        <div class="contact-item reveal reveal-delay-4">
+          <div class="contact-item-icon">📍</div>
+          <div>
+            <div class="contact-item-label">Location</div>
+            <div class="contact-item-value">Karvenagar, Pune, Maharashtra 411052</div>
+          </div>
+        </div>
+        <!-- Map embed (light-themed via CSS filter) -->
+        <div class="map-container reveal">
+          <iframe
+            src="https://maps.google.com/maps?q=Karvenagar+Pune+Maharashtra&t=&z=14&ie=UTF8&iwloc=&output=embed"
+            width="100%" height="200"
+            style="border:0;border-radius:14px;"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="PM TECHNO HUBB location map — Karvenagar, Pune"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Contact form -->
+      <div class="contact-form reveal reveal-delay-2">
+        <h3>Send Us a Message</h3>
+        <div id="formSuccess" class="form-success">
+          <div class="success-icon">✅</div>
+          <p style="font-size:20px;margin-bottom:8px;font-family:var(--font-heading);font-weight:800;">Message Sent!</p>
+          <p style="color:var(--text-dim);font-family:var(--font-body);font-weight:300">We'll get back to you within 24 hours.</p>
+        </div>
+        <form id="contactForm" onsubmit="handleContact(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cName">Name</label>
+              <input type="text" id="cName" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="cEmail">Email</label>
+              <input type="email" id="cEmail" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cPhone">Phone</label>
+            <input type="tel" id="cPhone" placeholder="+91 XXXXX XXXXX" />
+          </div>
+          <div class="form-group">
+            <label for="cMessage">Message</label>
+            <textarea id="cMessage" rows="5" placeholder="Tell us about your requirements..." required></textarea>
+          </div>
+          <button type="submit" class="btn-send"><span>Send Message ✈</span></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="footer-grid">
+
+    <!-- Brand -->
+    <div class="footer-brand">
+      <a href="#hero" class="logo" aria-label="PM TECHNO HUBB">
+        <div class="logo-icon" style="width:38px;height:38px;" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" style="width:20px;height:20px;">
+            <circle cx="12" cy="12" r="10" stroke="white" stroke-width="1.5"/>
+            <path d="M2 12h20M12 2C9.5 7 9.5 17 12 22M12 2c2.5 5 2.5 15 0 20" stroke="white" stroke-width="1.5"/>
+            <circle cx="12" cy="12" r="2" fill="white"/>
+          </svg>
+        </div>
+        <span class="logo-text">PM TECHNO HUBB</span>
+      </a>
+      <p>Empowering students and industries with cutting-edge IoT solutions and hands-on STEM workshops in Pune, Maharashtra.</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/pmtechnohubb" class="social-btn" target="_blank" rel="noopener" aria-label="Instagram">📸</a>
+        <a href="mailto:pmtechnohub@gmail.com" class="social-btn" aria-label="Email">✉️</a>
+        <a href="tel:+919021800883" class="social-btn" aria-label="Phone">📞</a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#offer">Our Services</a></li>
+        <li><a href="#workshops">Workshops</a></li>
+        <li><a href="#schools">Partnerships</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="#offer">Industrial IoT</a></li>
+        <li><a href="#offer">Medical IoT</a></li>
+        <li><a href="#offer">Robotics</a></li>
+        <li><a href="#offer">AI &amp; ML</a></li>
+        <li><a href="#offer">Embedded Systems</a></li>
+        <li><a href="#schools">Innovation Labs</a></li>
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-col">
+      <h5>Newsletter</h5>
+      <p style="font-size:13px;color:var(--text-dim);margin-bottom:0;">Get workshop updates and tech insights delivered to your inbox.</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="your@email.com" aria-label="Newsletter email" id="nlEmail" />
+        <button onclick="subscribeNewsletter()" aria-label="Subscribe">→</button>
+      </div>
+      <p id="nlMsg" style="font-size:12px;color:var(--blue);margin-top:8px;display:none;">Thanks for subscribing! ✓</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 PM TECHNO HUBB. All rights reserved. | Karvenagar, Pune, Maharashtra</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════════════════════════ -->
+<script>
+/* ── NAVBAR SCROLL ──────────────────────────────────────── */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+}, { passive: true });
+
+/* ── HAMBURGER ──────────────────────────────────────────── */
+const hamburger = document.getElementById('hamburger');
+const navMenu   = document.getElementById('nav-menu');
+hamburger.addEventListener('click', () => {
+  const open = navMenu.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', open);
+});
+navMenu.querySelectorAll('a').forEach(a =>
+  a.addEventListener('click', () => navMenu.classList.remove('open'))
+);
+
+/* ── SCROLL REVEAL ──────────────────────────────────────── */
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+/* ── COUNTER ANIMATION ──────────────────────────────────── */
+const counterObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting && !e.target.classList.contains('counted')) {
+      e.target.classList.add('counted');
+      const target = +e.target.dataset.target;
+      let cur = 0;
+      const step = target / 60;
+      const t = setInterval(() => {
+        cur = Math.min(cur + step, target);
+        e.target.textContent = Math.floor(cur) + '+';
+        if (cur >= target) clearInterval(t);
+      }, 20);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-target]').forEach(c => counterObs.observe(c));
+
+/* ── GALLERY (JS-rendered masonry) ─────────────────────── */
+const galleryData = [
+  { label: 'Students wiring a Robot Arm 🤖', h: 220 },
+  { label: 'ESP32 WiFi Project Lab 📡',       h: 280 },
+  { label: 'Arduino Sensor Assembly ⚡',      h: 200 },
+  { label: 'AI Workshop in progress 🧠',      h: 260 },
+  { label: 'PCB Soldering Session 🔧',        h: 240 },
+  { label: 'School Innovation Lab 🏫',        h: 220 },
+  { label: 'Motor Control Demo 🎡',           h: 200 },
+  { label: 'Smart Home Project 🏠',           h: 270 },
+  { label: 'Competition Day Winners 🏆',      h: 240 },
+];
+const masonry = document.getElementById('masonry');
+galleryData.forEach((item, i) => {
+  const div = document.createElement('div');
+  div.className = 'masonry-item';
+  div.innerHTML = `
+    <div class="masonry-placeholder" style="height:${item.h}px; font-family:var(--font-body);">
+      <span style="font-size:30px">${item.label.split(' ').pop()}</span>
+      <span style="font-size:13px;color:var(--text-dim)">${item.label.replace(/ .$/, '')}</span>
+      <span style="font-size:10px;letter-spacing:1.5px;font-family:var(--font-display);color:var(--text-muted);">WORKSHOP PHOTO</span>
+    </div>
+    <div class="overlay"><span class="overlay-icon">🔍</span></div>
+  `;
+  div.addEventListener('click', () => openLightbox(item.label, i));
+  masonry.appendChild(div);
+});
+
+function openLightbox(label, i) {
+  const lb = document.getElementById('lightbox');
+  const lc = document.getElementById('lightboxContent');
+  const emoji = label.split(' ').pop();
+  lc.innerHTML = `
+    <div style="width:560px;max-width:80vw;height:380px;
+      background:linear-gradient(135deg,rgba(0,112,243,0.08),rgba(0,198,255,0.08));
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
+      gap:16px;border-radius:16px;">
+      <span style="font-size:58px;">${emoji}</span>
+      <span style="font-size:16px;font-family:var(--font-display);color:var(--blue);letter-spacing:1px">
+        ${label.replace(/ .$/, '')}
+      </span>
+      <span style="font-size:12px;color:var(--text-muted)">PM TECHNO HUBB · Karvenagar, Pune</span>
+    </div>`;
+  lb.classList.add('active');
+  lb.focus();
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+}
+document.getElementById('lightbox').addEventListener('click', (e) => {
+  if (e.target === e.currentTarget) closeLightbox();
+});
+
+/* ── WORKSHOP MODAL ─────────────────────────────────────── */
+function openModal(workshop) {
+  const overlay = document.getElementById('modalOverlay');
+  document.getElementById('modal-subtitle').textContent = `Register for: ${workshop}`;
+  overlay.querySelector('select').value = workshop;
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.getElementById('modalOverlay').addEventListener('click', (e) => {
+  if (e.target === e.currentTarget) closeModal();
+});
+function handleRegister(e) {
+  e.preventDefault();
+  closeModal();
+  const n = e.target.querySelector('input[type=text]').value;
+  setTimeout(() => alert(`✅ Registration confirmed for ${n}!\nWe'll contact you shortly.`), 300);
+  e.target.reset();
+}
+
+/* ── TESTIMONIAL SLIDER ─────────────────────────────────── */
+const track = document.getElementById('sliderTrack');
+const cards = track.querySelectorAll('.review-card');
+const dotsContainer = document.getElementById('sliderDots');
+let curSlide = 0;
+let perSlide = window.innerWidth >= 900 ? 3 : window.innerWidth >= 600 ? 2 : 1;
+
+function updateSlider() {
+  perSlide = window.innerWidth >= 900 ? 3 : window.innerWidth >= 600 ? 2 : 1;
+  const totalSlides = Math.ceil(cards.length / perSlide);
+  if (curSlide >= totalSlides) curSlide = 0;
+  cards.forEach(c => {
+    c.style.minWidth = `calc(${100 / perSlide}% - ${(perSlide - 1) * 24 / perSlide}px)`;
+  });
+  track.style.transform = `translateX(-${curSlide * (100 / perSlide)}%)`;
+  dotsContainer.innerHTML = '';
+  for (let i = 0; i < totalSlides; i++) {
+    const d = document.createElement('button');
+    d.className = `dot${i === curSlide ? ' active' : ''}`;
+    d.setAttribute('aria-label', `Slide ${i + 1}`);
+    d.addEventListener('click', () => { curSlide = i; updateSlider(); });
+    dotsContainer.appendChild(d);
+  }
+}
+updateSlider();
+window.addEventListener('resize', updateSlider);
+setInterval(() => {
+  const total = Math.ceil(cards.length / perSlide);
+  curSlide = (curSlide + 1) % total;
+  updateSlider();
+}, 4500);
+
+/* ── CONTACT FORM ───────────────────────────────────────── */
+function handleContact(e) {
+  e.preventDefault();
+  document.getElementById('contactForm').style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+}
+
+/* ── NEWSLETTER ─────────────────────────────────────────── */
+function subscribeNewsletter() {
+  const email = document.getElementById('nlEmail').value;
+  if (email && email.includes('@')) {
+    document.getElementById('nlMsg').style.display = 'block';
+    document.getElementById('nlEmail').value = '';
+  }
+}
+
+/* ── ESC KEY ────────────────────────────────────────────── */
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') { closeModal(); closeLightbox(); }
+});
+</script>
+</body>
+</html>
