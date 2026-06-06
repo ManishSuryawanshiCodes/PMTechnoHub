@@ -1,4 +1,4 @@
-﻿/* ════════════════════════════════════════════════════════
+/* ════════════════════════════════════════════════════════
    DESIGN TOKENS — Light-on-light-blue theme
    Primary: Electric Blue / Cyan
    Background: Very light blue-white (no pure black)
@@ -12,10 +12,10 @@
   --bg-nav:       rgba(240,246,255,0.82);
 
   /* Primary Palette — Electric Blue / Cyan */
-  --blue:         #0070F3;   /* electric blue — primary */
-  --blue2:        #0055C4;   /* deep blue */
+  --blue:         #0062FF;   /* electric blue — primary */
+  --blue2:        #004ECC;   /* deep blue */
   --cyan:         #00C6FF;   /* bright cyan accent */
-  --cyan2:        #00A8DB;   /* mid cyan */
+  --cyan2:        #009AD6;   /* mid cyan */
 
   /* Text */
   --text:         #0D1B3E;   /* dark navy — primary text */

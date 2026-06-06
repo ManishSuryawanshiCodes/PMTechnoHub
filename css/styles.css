@@ -1,4 +1,4 @@
-﻿  <style>
+  <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 
@@ -138,8 +138,10 @@ section { position: relative; z-index: 1; }
 }
 .card-lift:hover {
   transform: translateY(-7px);
-  box-shadow: 0 24px 60px rgba(0,112,243,0.13), 0 0 0 1px rgba(0,198,255,0.22);
+  box-shadow: 0 24px 60px rgba(0,98,255,0.18), 0 0 0 1px rgba(0,198,255,0.30);
   border-color: rgba(0,198,255,0.30) !important;
+  position: relative;
+  z-index: 2;
 }
 
 /* ════════════════════════════════════════════════════════

@@ -19,19 +19,17 @@ const PMTHUB_DATA = {
   ],
 
   workshops: [
-    { title: 'IoT Smart Speaker Workshop', duration: '7 Days · Intensive', open: true, topics: ['Voice Recognition', 'Smart Device Programming', 'Wake Word Detection', 'Cloud Integration'] },
-    { title: 'Robotics Workshop', duration: '3 Days · Intensive', open: true, topics: ['Robot Design', 'Motor Control', 'Sensor Integration', 'Obstacle Avoidance'] },
-    { title: 'Arduino, ESP32 & IoT Workshop', duration: '2 / 3 / 7 Days', open: true, topics: ['Microcontroller Basics', 'Sensors & Actuators', 'WiFi & Web Servers', 'MQTT Protocols'] },
-    { title: 'Basic Electronics Workshop', duration: '2 Days · Hardware', open: true, topics: ['Breadboarding', 'Ohm\'s Law', 'LED & Motor Circuits', 'Soldering Basics'] },
+    { title: 'Basic Embedded', duration: '2 Days · Hardware', open: true, topics: ['Microcontroller Fundamentals', 'GPIO Programming', 'Digital & Analog I/O', 'Sensor Integration'] },
+    { title: 'Arduino Workshop', duration: '3 Days · Intensive', open: true, topics: ['Arduino Basics', 'Sensor & Actuator Control', 'Web Server Projects', 'IoT Connectivity'] },
+    { title: 'Jr. IoT Innovators Workshop', duration: '2 Days · Beginner', open: true, topics: ['IoT Concepts', 'Smart Device Basics', 'WiFi & MQTT', 'Project Building'] },
+    { title: 'Advanced IoT Bootcamp', duration: '7 Days · Intensive', open: true, topics: ['Advanced MQTT', 'Cloud Integration', 'Real-Time Data Processing', 'System Architecture'] },
   ],
 
   products: [
-    { icon: '📡', title: 'ESP32 Dev Kit Bundle', description: 'ESP32 module with sensors starter pack for IoT prototypes.', tag: 'IoT Hardware' },
-    { icon: '🤖', title: 'Line-Follower Robot Kit', description: 'Chassis, motors, IR sensors, and Arduino-compatible controller.', tag: 'Robotics' },
-    { icon: '🔊', title: 'Smart Speaker IoT Module', description: 'Voice-enabled board from our 7-day Smart Speaker workshop.', tag: 'Workshop Kit' },
-    { icon: '🛡️', title: 'SteriGuard UV Controller', description: 'Medical-grade UV disinfection IoT controller.', tag: 'Medical IoT' },
-    { icon: '⚡', title: 'Basic Electronics Lab Kit', description: 'Breadboard, components, multimeter, and soldering essentials.', tag: 'Education' },
-    { icon: '🏭', title: 'Machine Health Monitor Node', description: 'Vibration and temperature node for predictive maintenance.', tag: 'B2B IoT' },
+    { icon: '🧭', title: 'Explorer Kit', price: '₹599', description: 'Perfect starter pack for beginners. Includes basic components for your first IoT project.', tag: 'Beginner' },
+    { icon: '🛠️', title: 'Inventor Kit', price: '₹1299', description: 'Intermediate kit with sensors and modules for hands-on learning and project building.', tag: 'Intermediate' },
+    { icon: '💡', title: 'Innovator Kit', price: '₹1999', description: 'Advanced kit with WiFi, Bluetooth, and multiple sensors for complex IoT solutions.', tag: 'Advanced' },
+    { icon: '🎯', title: 'IoT Master Kit', price: '₹2999', description: 'Professional-grade kit with all tools, modules, and documentation for complete IoT mastery.', tag: 'Professional' },
   ],
 
   galleryProjects: [

@@ -60,8 +60,8 @@
         <div class="product-card-body">
           <h3>${p.title}</h3>
           <p>${p.description}</p>
-          <span class="product-price">Inquire to Buy</span>
-          <a href="contact.html" class="btn-secondary product-cta">Contact Us</a>
+          <span class="product-price">${p.price}</span>
+          <a href="contact.html" class="btn-secondary product-cta">Inquire Now</a>
         </div>
       </article>`
       )

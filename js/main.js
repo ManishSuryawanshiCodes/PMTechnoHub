@@ -73,4 +73,46 @@
     observeReveals();
     observeCounters();
   });
+
+  // Bubble pop-up animation in hero
+  function initBubbles() {
+    const bubbleContainer = document.querySelector('.bubble-container');
+    if (!bubbleContainer) return;
+
+    const techIcons = ['🤖', '📡', '⚙️', '🔌', '🔋', '💡', '🧠', '🛠️', '📟', '💾', '💻', '🛰️'];
+
+    function createBubble() {
+      const bubble = document.createElement('div');
+      bubble.className = 'bubble';
+      
+      const randomIcon = techIcons[Math.floor(Math.random() * techIcons.length)];
+      bubble.innerHTML = `<span class="bubble-icon">${randomIcon}</span>`;
+      
+      const size = Math.floor(Math.random() * 25) + 35; // 35px to 60px
+      bubble.style.width = `${size}px`;
+      bubble.style.height = `${size}px`;
+      bubble.style.left = `${Math.random() * 100}%`;
+      
+      const duration = Math.floor(Math.random() * 5) + 8; // 8s to 13s
+      bubble.style.animationDuration = `${duration}s`;
+      
+      bubbleContainer.appendChild(bubble);
+
+      setTimeout(() => bubble.remove(), duration * 1000);
+    }
+
+    // Create initial bubbles
+    for (let i = 0; i < 6; i++) {
+      setTimeout(() => createBubble(), i * 1500);
+    }
+
+    // Create bubbles continuously
+    setInterval(() => createBubble(), 2200);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initBubbles);
+  } else {
+    initBubbles();
+  }
 })();
