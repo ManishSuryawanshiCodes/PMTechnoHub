@@ -16,7 +16,7 @@
 .workshop-grid,
 #workshops-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr));
   gap: 24px;
   margin-top: 56px;
   align-items: stretch;
@@ -178,7 +178,7 @@
 .offer-grid,
 #services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr));
   gap: 24px;
   margin-top: 56px;
   align-items: stretch;
@@ -187,7 +187,7 @@
 #services-grid .offer-card {
   display: flex;
   flex-direction: column;
-  height: auto;
+  height: 100%;
 }
 .offer-card p {
   flex: 1;
@@ -197,7 +197,7 @@
 .products-grid,
 #products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr));
   gap: 24px;
   margin-top: 56px;
   align-items: stretch;
@@ -210,6 +210,7 @@
   backdrop-filter: blur(20px);
   display: flex;
   flex-direction: column;
+  height: 100%;
   transition:
     transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 0.35s ease;
@@ -892,6 +893,19 @@
 @media (max-width: 520px) {
   .about-teaser-visual {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile responsive alignment to prevent overlapping/awkward squishing in cards */
+@media (max-width: 768px) {
+  .offer-grid,
+  #services-grid,
+  .products-grid,
+  #products-grid,
+  .workshop-grid,
+  #workshops-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
 

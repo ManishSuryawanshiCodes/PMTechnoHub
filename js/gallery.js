@@ -17,7 +17,6 @@
   lightbox.id = 'projectLightbox';
   lightbox.innerHTML = `
     <button type="button" class="project-lightbox-close" aria-label="Close">&times;</button>
-    <h3 id="projectLightboxTitle"></h3>
     <div class="project-lightbox-main" id="projectLightboxMain"></div>
     <div class="project-lightbox-thumbs" id="projectLightboxThumbs"></div>
     <div class="project-lightbox-nav">
@@ -25,8 +24,6 @@
       <button type="button" id="projectNext">Next →</button>
     </div>`;
   document.body.appendChild(lightbox);
-
-  const titleEl = document.getElementById('projectLightboxTitle');
   const mainEl = document.getElementById('projectLightboxMain');
   const thumbsEl = document.getElementById('projectLightboxThumbs');
   const prevBtn = document.getElementById('projectPrev');
@@ -164,7 +161,6 @@
         ${mediaHtml}
         <span class="gallery-card-badge">${badgeCategoryText}</span>
         <span class="gallery-card-count-badge">${badgeCountText}</span>
-        <span class="gallery-bento-caption">${project.title}</span>
         <div class="overlay"><span class="overlay-icon">${isVideoCover ? '▶' : '🔍'}</span></div>`;
 
       el.addEventListener('click', () => {
@@ -259,9 +255,6 @@
     
     const item = activeProject.media[activeMediaIndex];
     
-    // Set title showing active media info
-    titleEl.textContent = `${activeProject.title}: ${item.title} (${activeMediaIndex + 1}/${activeProject.media.length})`;
-    
     // Clear main content
     mainEl.innerHTML = '';
 
@@ -276,7 +269,7 @@
     } else {
       const img = document.createElement('img');
       img.src = item.path;
-      img.alt = item.title;
+      img.alt = activeProject.title;
       img.onerror = () => {
         img.outerHTML = `<div style="padding: 40px; color: var(--blue); text-align: center;">Error loading image file</div>`;
       };
