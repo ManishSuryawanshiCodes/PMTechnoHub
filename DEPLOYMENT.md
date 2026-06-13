@@ -1,151 +1,126 @@
-# PM TECHNO HUBB — Deploy, Domain, Gallery & SEO
+# PM TECHNO HUBB — Full-Stack Deployment Plan (Node.js & MongoDB Atlas)
 
-Repo: [github.com/baryongaming/PMTechnoHub](https://github.com/baryongaming/PMTechnoHub)
-
----
-
-## 1. Project structure (where to edit)
-
-| Change | File |
-|--------|------|
-| Workshops, services, products text | `js/data.js` |
-| Phone, email, **Maps link** | `js/config.js` |
-| Colors / fonts | `css/variables.css`, `design.md` |
-| New page | Copy `about.html`, add to nav in all HTML + `sitemap.xml` |
-| Gallery project + photos | `js/data.js` → `galleryProjects` + files in `images/gallery/` |
-| Footer / logo | `js/layout.js`, `images/logo.png` |
-
-```text
-pmtechnohubb/
-├── index.html … contact.html   # pages
-├── css/main.css                # styles entry
-├── js/config.js data.js render.js gallery.js layout.js …
-├── images/logo.png gallery/*.jpg
-├── robots.txt sitemap.xml
-└── DEPLOYMENT.md README.md
-```
+This guide outlines the steps to deploy the **PM TECHNO HUBB** website. The site has been upgraded from a static website to a lightweight **Node.js/Express server** that retrieves gallery projects from a **MongoDB Atlas database** and features gzip compression and custom security headers.
 
 ---
 
-## 2. Gallery images (no database)
+## 1. Local Database Seeding (Done Once)
 
-Static hosting only — images live in the repo or CDN.
+Since MongoDB Atlas is a cloud-hosted database, the data seeded from your local environment is stored in the cloud. The production server will connect to this same database.
 
-1. Compress photos (WebP or JPG, ~1200px wide, &lt;200 KB each).
-2. Save under `images/gallery/` e.g. `robotics-1.jpg`.
-3. Edit `js/data.js` → `galleryProjects`:
-
-```javascript
-{
-  title: 'Robotics Workshop',
-  size: 'large',  // large | wide | tall | medium | small
-  cover: 'images/gallery/robotics-1.jpg',
-  images: [
-    'images/gallery/robotics-1.jpg',
-    'images/gallery/robotics-2.jpg',
-  ],
-}
-```
-
-4. Commit and redeploy. No backend required.
-
-**Optional later:** Cloudinary / Supabase Storage — change paths in `data.js` to full URLs.
+1. Ensure your `.env` file contains your connection string:
+   ```env
+   MONGODB_URI=mongodb+srv://ferrumstudioofficial_db_user:mVkwqH9YggnbE0hI@cluster0.rxhrnd9.mongodb.net/pmtechnohubb?appName=Cluster0
+   PORT=3000
+   ```
+2. Seed the database locally (scans the gallery directory, groups the 60 items into 8 projects, and uploads them to MongoDB):
+   ```bash
+   npm run seed
+   ```
 
 ---
 
-## 3. Google Maps location
+## 2. Recommended Hosting Plan: Render (Free Tier)
 
-Official link (used on Contact + Home):
+**Render** is the easiest, most reliable free platform to host Node.js applications.
 
-**https://maps.app.goo.gl/XvjBEcS1RpoRpRNu6**
-
-Update in one place: `js/config.js` → `mapsUrl`.
-
-For a custom embed iframe: Google Maps → your place → Share → Embed a map → paste `src` into `contact.html` / `index.html` `.map-container iframe`.
-
----
-
-## 4. SEO checklist (already in project)
-
-- Unique `<title>` + `meta description` per page
-- `link rel="canonical"` (set real domain before launch)
-- `robots.txt` + `sitemap.xml` (update domain in sitemap)
-- JSON-LD LocalBusiness on home (`index.html`)
-- Semantic HTML (`header`, `nav`, `main`, `footer`)
-- `loading="lazy"` on gallery images
-- Mobile viewport: `width=device-width, initial-scale=1`
-
-**Before go-live:** Replace `https://pmtechnohub.com` in `sitemap.xml`, canonical tags, and `config.js` → `siteUrl`. Add Google Search Console + GA4 (see `skill.md`).
+### Steps to Deploy on Render:
+1. Sign in to [Render](https://render.com) using your GitHub account.
+2. Click **New +** in the dashboard and select **Web Service**.
+3. Connect your GitHub repository: `baryongaming/PMTechnoHub`.
+4. Configure the Web Service settings:
+   - **Name**: `pm-techno-hubb`
+   - **Region**: Select a region close to India (e.g., Singapore `singapore-sg` or `oregon-us`).
+   - **Branch**: `main`
+   - **Runtime**: `Node`
+   - **Build Command**: `npm install`
+   - **Start Command**: `npm start`
+   - **Instance Type**: **Free**
+5. Click **Advanced** and add the following **Environment Variables**:
+   - `MONGODB_URI` = `mongodb+srv://ferrumstudioofficial_db_user:mVkwqH9YggnbE0hI@cluster0.rxhrnd9.mongodb.net/pmtechnohubb?appName=Cluster0`
+   - `NODE_ENV` = `production`
+6. Click **Create Web Service**. Render will automatically pull the code, install dependencies, and start the Express server.
 
 ---
 
-## 5. Mobile-first
+## 3. Alternative Hosting: Self-Hosted VPS (DigitalOcean / Linode / Hostinger)
 
-- Base CSS = mobile layout; `min-width` breakpoints scale up (`768px`, `1024px`).
-- Touch-friendly nav (hamburger), full-width forms, stacked grids on small screens.
-- Test: Chrome DevTools → iPhone SE / Pixel; real device on Wi‑Fi.
+For dedicated performance and zero cold starts, a Virtual Private Server (VPS) is recommended.
+
+### Steps to Deploy on VPS (Ubuntu):
+1. **Prepare Server**: Connect to your VPS via SSH and install Node.js (v18+), Nginx, and Git:
+   ```bash
+   curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+   sudo apt-get install -y nodejs nginx git
+   ```
+2. **Clone Repo & Install**:
+   ```bash
+   git clone https://github.com/baryongaming/PMTechnoHub.git /var/www/pmtechnohubb
+   cd /var/www/pmtechnohubb
+   npm install --omit=dev
+   ```
+3. **Configure Environment**: Create a `.env` file:
+   ```bash
+   nano .env
+   ```
+   Add:
+   ```env
+   PORT=3000
+   MONGODB_URI=mongodb+srv://ferrumstudioofficial_db_user:mVkwqH9YggnbE0hI@cluster0.rxhrnd9.mongodb.net/pmtechnohubb?appName=Cluster0
+   NODE_ENV=production
+   ```
+4. **Process Management**: Install `pm2` to run the node server continuously in the background:
+   ```bash
+   sudo npm install -g pm2
+   pm2 start server.js --name "pmtechnohubb"
+   pm2 save
+   pm2 startup
+   ```
+5. **Nginx Reverse Proxy**: Configure Nginx to proxy traffic from port 80/443 to port 3000:
+   ```bash
+   sudo nano /etc/nginx/sites-available/pmtechnohubb
+   ```
+   Paste configuration:
+   ```nginx
+   server {
+       listen 80;
+       server_name pmtechnohub.com www.pmtechnohub.com;
+
+       location / {
+           proxy_pass http://localhost:3000;
+           proxy_http_version 1.1;
+           proxy_set_header Upgrade $http_upgrade;
+           proxy_set_header Connection 'upgrade';
+           proxy_set_header Host $host;
+           proxy_cache_bypass $http_upgrade;
+       }
+   }
+   ```
+   Enable site and restart Nginx:
+   ```bash
+   sudo ln -s /etc/nginx/sites-available/pmtechnohubb /etc/nginx/sites-enabled/
+   sudo systemctl restart nginx
+   ```
+6. **SSL Setup**: Secure the site using Certbot:
+   ```bash
+   sudo apt install certbot python3-certbot-nginx
+   sudo certbot --nginx -d pmtechnohub.com -d www.pmtechnohub.com
+   ```
 
 ---
 
-## 6. Cheap hosting plan (recommended)
+## 4. Custom Domain Configuration
 
-| Step | Service | Cost (approx.) |
-|------|---------|----------------|
-| Code | **GitHub** [PMTechnoHub](https://github.com/baryongaming/PMTechnoHub) | Free |
-| Hosting | **Cloudflare Pages** or **Netlify** | Free tier |
-| Domain `.in` | **GoDaddy India** / **Hostinger** / **Namecheap** | ₹500–900/year |
-| Domain `.com` | Same registrars | ₹800–1200/year |
-| Email | Gmail (existing) | Free |
-
-### Deploy on Cloudflare Pages (free, fast in India)
-
-1. Push code to `baryongaming/PMTechnoHub` (see below).
-2. [dash.cloudflare.com](https://dash.cloudflare.com) → Pages → Create project → Connect GitHub.
-3. Build settings: **None** (static HTML). Build command: empty. Output directory: `/`.
-4. Custom domain: add `pmtechnohub.in` or `.com` in Pages → Custom domains.
-5. DNS at registrar: point nameservers to Cloudflare (or CNAME to `*.pages.dev`).
-
-### Deploy on GitHub Pages (free)
-
-1. Repo → Settings → Pages → Source: **main** branch, folder **/ (root)**.
-2. Site URL: `https://baryongaming.github.io/PMTechnoHub/`
-3. For root domain, use Cloudflare or Netlify instead (cleaner URLs).
-
-### Deploy on Netlify (free)
-
-Drag-drop folder or connect GitHub; publish directory = project root.
+1. Purchase your domain (e.g., `pmtechnohub.com` or `pmtechnohub.in`) from GoDaddy, Hostinger, or Namecheap.
+2. In the domain provider's DNS settings, add the following records:
+   - **ANAME/ALIAS** (or **A** record if supported): Point `@` to the target Render Web Service URL (e.g., `pm-techno-hubb.onrender.com`) or your VPS IP.
+   - **CNAME**: Point `www` to your Render Web Service URL.
+3. In Render, go to **Settings** -> **Custom Domains**, click **Add Custom Domain**, and add `pmtechnohub.com` and `www.pmtechnohub.com`. Render will issue SSL certificates automatically.
 
 ---
 
-## 7. Domain tips (cheap)
+## 5. SEO & AI Search Readiness Maintenance
 
-- Prefer **`.in`** for Pune/local SEO (~₹600/yr on promos).
-- Search coupons: Hostinger/GoDaddy first-year offers.
-- Connect domain only after hosting is live; enable **HTTPS** (auto on Cloudflare/Netlify).
-
----
-
-## 8. Git push to GitHub
-
-```bash
-cd d:\pmtechnohubb
-git init
-git add .
-git commit -m "Full multi-page PM TECHNO HUBB site with gallery, SEO, and maps"
-git branch -M main
-git remote add origin https://github.com/baryongaming/PMTechnoHub.git
-git pull origin main --allow-unrelated-histories
-# resolve conflicts if any (keep local site files), then:
-git push -u origin main
-```
-
-**Pull request (optional):** push branch `develop` instead, open PR on GitHub: Compare → `develop` → `main`.
-
----
-
-## 9. Post-launch
-
-- Submit sitemap in Google Search Console
-- Link Instagram bio to live URL
-- Add real `og-image.jpg` (1200×630) in `images/`
-- Replace `REPLACE_WITH_YOUR_CODE` in meta verification when ready
+- **Sitemap**: The `sitemap.xml` is served statically. If you add pages, update the sitemap.
+- **Robots.txt**: Restricts or allows specific folders. It references the sitemap URL.
+- **AI Crawlers**: The embedded JSON-LD schemas (`LocalBusiness` on home, `ItemList/Product` on products page, `ItemList/Course` on workshops page, `Service` on services page) tell search assistants (ChatGPT Search, Perplexity, Google Gemini) exactly what PM TECHNO HUBB offers. Do not delete the `<script type="application/ld+json">` tags.

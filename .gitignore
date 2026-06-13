@@ -3,3 +3,7 @@ Thumbs.db
 *.log
 .env
 .vscode/
+node_modules/
+
+# Ignore large videos exceeding GitHub file size limit
+images/gallery/VID20230303172831.mp4

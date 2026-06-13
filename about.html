@@ -3,13 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | PM TECHNO HUBB</title>
-  <meta name="description" content="About PM TECHNO HUBB — robotics, IoT, electronics & STEM education in Pune." />
+  <title>About Us | PM TECHNO HUBB | Pune STEM & IoT</title>
+  <meta name="description" content="About PM TECHNO HUBB — robotics, IoT, electronics & STEM education in Pune. Meet our founder and explore our mission." />
+  <link rel="canonical" href="https://pmtechnohub.com/about.html" />
+  <meta property="og:title" content="About Us | PM TECHNO HUBB | Pune STEM & IoT" />
+  <meta property="og:description" content="Learn about our mission to build intelligence through robotics, IoT, electronics, and STEM education in Karvenagar, Pune." />
+  <meta property="og:image" content="https://pmtechnohub.com/images/logo.png" />
+  <meta property="og:url" content="https://pmtechnohub.com/about.html" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="About Us | PM TECHNO HUBB" />
+  <meta name="twitter:description" content="Discover our story, mission, and how we empower students and industries with IoT and robotics in Pune." />
+  <meta name="twitter:image" content="https://pmtechnohub.com/images/logo.png" />
   <link rel="icon" href="images/logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Syne:wght@400;600;700;800&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/main.css" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "mainEntity": {
+        "@type": "LocalBusiness",
+        "@id": "https://pmtechnohub.com/#localbusiness",
+        "name": "PM TECHNO HUBB",
+        "description": "Robotics, IoT, electronics, and hands-on STEM education centre in Karvenagar, Pune.",
+        "url": "https://pmtechnohub.com",
+        "image": "https://pmtechnohub.com/images/logo.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Karvenagar",
+          "addressLocality": "Pune",
+          "addressRegion": "Maharashtra",
+          "postalCode": "411052",
+          "addressCountry": "IN"
+        }
+      }
+    }
+  </script>
 </head>
 <body data-page="about">
 
@@ -31,7 +63,7 @@
       <li><a href="workshops.html" data-nav="workshops">Workshops</a></li>
       <li><a href="products.html" data-nav="products">Products</a></li>
       <li><a href="partnerships.html" data-nav="partnerships">Partnerships</a></li>
-      <li><a href="contact.html" class="nav-cta" data-nav="contact">Contact Us</a></li>
+      <li><a href="contact.html" class="nav-cta" data-nav="contact">Contact Now</a></li>
     </ul>
   </nav>
   <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -40,7 +72,6 @@
 <main>
   <section class="page-hero" aria-label="About intro">
     <div class="hero-content reveal">
-      <img src="images/logo.png" alt="PM TECHNO HUBB" class="hero-logo" width="180" height="180" style="margin-bottom:20px" />
       <div class="section-label" style="justify-content:center">About Us</div>
       <h1 class="section-title">About <span class="text-gradient">PM TECHNO HUBB</span></h1>
       <p class="hero-sub" style="margin-bottom:0">Karvenagar, Pune · We Build Intelligence</p>
@@ -98,12 +129,29 @@
   </section>
 
   <div class="divider"></div>
+  
+  <section id="gallery" aria-labelledby="gallery-heading">
     <div class="gallery-inner" style="padding:var(--section-pad);max-width:1400px;margin:0 auto;">
       <div class="reveal" style="text-align:center">
         <div class="section-label" style="justify-content:center">Our Work</div>
         <h2 id="gallery-heading" class="section-title">Project <span class="text-gradient">Gallery</span></h2>
-        <p style="color:var(--text-dim);max-width:520px;margin:12px auto 0">Click a project to view more photos.</p>
+        <p style="color:var(--text-dim);max-width:520px;margin:12px auto 0">Explore our hands-on labs, workshops, and competitions. Click any card to expand media.</p>
       </div>
+
+      <!-- Glassmorphic Filter Tabs -->
+      <div class="gallery-filter-container reveal" style="margin-top: 36px; text-align: center;">
+        <div class="gallery-filter-tabs" id="gallery-filter">
+          <button type="button" class="filter-tab active" data-filter="all">All Media</button>
+          <button type="button" class="filter-tab" data-filter="Robotics">Robotics</button>
+          <button type="button" class="filter-tab" data-filter="IoT & Smart Devices">IoT & Smart Devices</button>
+          <button type="button" class="filter-tab" data-filter="Arduino & Sensors">Arduino & Sensors</button>
+          <button type="button" class="filter-tab" data-filter="PCB Soldering">PCB Soldering</button>
+          <button type="button" class="filter-tab" data-filter="Competitions">Competitions</button>
+          <button type="button" class="filter-tab" data-filter="video">📹 Videos</button>
+          <button type="button" class="filter-tab" data-filter="image">📷 Images</button>
+        </div>
+      </div>
+
       <div class="gallery-bento" id="gallery-bento"></div>
     </div>
   </section>

@@ -187,7 +187,7 @@
 #services-grid .offer-card {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: auto;
 }
 .offer-card p {
   flex: 1;
@@ -213,6 +213,8 @@
   transition:
     transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 0.35s ease;
+  padding: 0;
+  gap: 0;
 }
 .product-card:hover {
   transform: translateY(-8px);
@@ -346,7 +348,8 @@
     min-height: 200px;
   }
 }
-.gallery-bento-item img {
+.gallery-bento-item img,
+.gallery-bento-item video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -651,3 +654,245 @@
     order: -1; /* image on top on mobile */
   }
 }
+
+/* ════════════════════════════════════════════════════════
+   PREMIUM GALLERY FILTERS & CARDS (MongoDB-integrated)
+   ════════════════════════════════════════════════════════ */
+
+.gallery-filter-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.gallery-filter-tabs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(0, 112, 243, 0.08);
+  border-radius: 30px;
+  box-shadow: 0 8px 32px rgba(0, 112, 243, 0.04);
+}
+
+.filter-tab {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dim);
+  background: transparent;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  outline: none;
+}
+
+.filter-tab:hover {
+  color: var(--blue);
+  background: rgba(0, 112, 243, 0.05);
+}
+
+.filter-tab.active {
+  color: #fff;
+  background: linear-gradient(135deg, var(--blue), var(--cyan));
+  box-shadow: 0 4px 15px rgba(0, 112, 243, 0.25);
+}
+
+/* Glassmorphic Media Badges on Cards */
+.gallery-card-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 3;
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text);
+  padding: 4px 10px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 112, 243, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  pointer-events: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.gallery-bento-item:hover .gallery-card-badge {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(0, 198, 255, 0.25);
+}
+
+.gallery-card-count-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 3;
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text);
+  padding: 4px 10px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 112, 243, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  pointer-events: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.gallery-bento-item:hover .gallery-card-count-badge {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(0, 198, 255, 0.25);
+}
+
+/* Premium Hover Zoom on Bento Images & Videos */
+.gallery-bento-item img,
+.gallery-bento-item video {
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.gallery-bento-item:hover img,
+.gallery-bento-item:hover video {
+  transform: scale(1.06);
+}
+
+/* Play Icon Overlay for Videos */
+.gallery-bento-item.is-video .overlay-icon {
+  font-size: 38px;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(0, 198, 255, 0.8);
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+}
+
+/* Video Frame in Lightbox */
+.project-lightbox-main video {
+  width: 100%;
+  height: 100%;
+  max-height: 55vh;
+  object-fit: contain;
+  border-radius: 12px;
+  display: block;
+  background: #000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Fade animation for filter changes */
+.gallery-bento-item {
+  transition:
+    border-color 0.3s,
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s,
+    opacity 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+    scale 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.gallery-bento-item.hidden {
+  opacity: 0;
+  scale: 0.8;
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ════════════════════════════════════════════════════════
+   ABOUT PM TECHNO HUBB TEASER SECTION (Home Page)
+   ════════════════════════════════════════════════════════ */
+
+.about-teaser-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.about-teaser-content {
+  text-align: left;
+}
+
+.about-teaser-p {
+  font-size: 16px;
+  color: var(--text-dim);
+  line-height: 1.85;
+  margin-bottom: 18px;
+}
+
+.about-teaser-visual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.about-teaser-visual .visual-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 24px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.about-teaser-visual .visual-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 198, 255, 0.35);
+  box-shadow: 0 12px 30px rgba(0, 112, 243, 0.1);
+}
+
+.visual-card-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.about-teaser-visual h3 {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.about-teaser-visual p {
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .about-teaser-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  .about-teaser-content {
+    text-align: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .about-teaser-visual {
+    grid-template-columns: 1fr;
+  }
+}
+
+
