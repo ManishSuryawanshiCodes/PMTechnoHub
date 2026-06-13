@@ -6,6 +6,9 @@
   const BRAND = 'PM TECHNO HUBB';
 
   document.querySelectorAll('.logo').forEach((el) => {
+    if (el.querySelector('.logo-text')) {
+      el.classList.add('logo--with-text');
+    }
     if (el.querySelector('.logo-img')) return;
     const icon = el.querySelector('.logo-icon');
     if (icon) icon.remove();
@@ -16,7 +19,6 @@
     img.width = 48;
     img.height = 48;
     el.prepend(img);
-    el.classList.add('logo--with-text');
     const text = el.querySelector('.logo-text');
     if (text) text.textContent = BRAND;
   });
