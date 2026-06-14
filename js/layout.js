@@ -33,7 +33,9 @@
           <img src="${LOGO_SRC}" alt="${BRAND}" class="logo-img" width="56" height="56" />
           <span class="logo-text">${BRAND}</span>
         </a>
-        <p>We Build Intelligence — IoT, robotics &amp; STEM in Karvenagar, Pune.</p>
+        <p style="margin-top: 14px; margin-bottom: 0; font-weight: 600;">We Build Intelligence</p>
+        <p style="margin-top: 4px; margin-bottom: 0; color: var(--text-dim);">— Embedded IoT, Robotics, &amp; STEM</p>
+        <p style="margin-top: 4px; margin-bottom: 0; color: var(--text-dim);">Karvenagar, Pune</p>
         <div class="footer-social">
           <a href="https://instagram.com/pmtechnohubb" class="social-btn" target="_blank" rel="noopener" aria-label="Instagram">📸</a>
           <a href="mailto:pmtechnohub@gmail.com" class="social-btn" aria-label="Email">✉️</a>

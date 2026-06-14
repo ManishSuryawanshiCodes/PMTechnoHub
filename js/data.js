@@ -30,6 +30,8 @@ const PMTHUB_DATA = {
     { icon: '🛠️', title: 'Inventor Kit', price: '₹1299', description: 'Intermediate kit with sensors and modules for hands-on learning and project building.', tag: 'Intermediate' },
     { icon: '💡', title: 'Innovator Kit', price: '₹1999', description: 'Advanced kit with WiFi, Bluetooth, and multiple sensors for complex IoT solutions.', tag: 'Advanced' },
     { icon: '🎯', title: 'IoT Master Kit', price: '₹2999', description: 'Professional-grade kit with all tools, modules, and documentation for complete IoT mastery.', tag: 'Professional' },
+    { icon: '🤖', title: 'Mobile Robot Platform', price: 'Inquire', description: 'Custom mobile robot platform for research, hands-on learning, and autonomous robotic navigation prototyping.', tag: 'Robotics' },
+    { icon: '🎹', title: 'Buzzer Melodies & Keypad Matrix Kit', price: 'Inquire', description: 'Educational component kit with multi-tone buzzers, matrix keypads, and breadboard wiring guides for sound synthesis and input control.', tag: 'Beginner' },
   ],
 
   galleryProjects: [

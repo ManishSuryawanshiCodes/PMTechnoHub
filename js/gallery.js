@@ -50,74 +50,109 @@
       const fallbackProjects = [
         {
           _id: 'fallback-p0',
-          title: 'Robotics Workshop',
-          category: 'Robotics',
+          title: 'EMBEDDED IoT',
+          category: 'EMBEDDED IoT',
           size: 'large',
           coverPath: 'images/gallery/IMG20211223150621.jpg',
           coverType: 'image',
           media: [
             { title: 'Robotics Arm Mechanism Design', path: 'images/gallery/IMG20211223150621.jpg', type: 'image', date: 'Dec 23, 2021' },
-            { title: 'Chassis Development & Assembly', path: 'images/gallery/IMG20220510201314.jpg', type: 'image', date: 'May 10, 2022' },
-            { title: 'Robot Speed Run', path: 'images/gallery/VID-20220518-WA0000.mp4', type: 'video', date: 'May 18, 2022' }
+            { title: 'Smart Home Automation Demo', path: 'images/gallery/IMG20220217112105.jpg', type: 'image', date: 'Feb 17, 2022' },
+            { title: 'Node-RED Dashboard Configuration', path: 'images/gallery/IMG20220806133859.jpg', type: 'image', date: 'Aug 6, 2022' },
+            { title: 'Soldering Resistors on Custom PCB', path: 'images/gallery/IMG20220216091538.jpg', type: 'image', date: 'Feb 16, 2022' },
+            { title: 'PCB Layout Component Alignment', path: 'images/gallery/IMG20221220175240.jpg', type: 'image', date: 'Dec 20, 2022' },
+            { title: 'Robotics Workshop Team Assembly', path: 'images/gallery/IMG20230706161523.jpg', type: 'image', date: 'Jul 6, 2023' }
           ]
         },
         {
-          _id: 'fallback-p1',
-          title: 'Arduino & Sensors Lab',
-          category: 'Arduino & Sensors',
+          _id: 'fallback-p_college',
+          title: 'COLLEGE PROJECTS',
+          category: 'COLLEGE PROJECTS',
           size: 'wide',
-          coverPath: 'images/gallery/IMG20220216091538.jpg',
+          coverPath: 'images/gallery/IMG20220525213755.jpg',
           coverType: 'image',
           media: [
-            { title: 'Multi-sensor Shield Debugging', path: 'images/gallery/IMG20220216091538.jpg', type: 'image', date: 'Feb 16, 2022' },
-            { title: 'Buzzer Melodies & Keypad Matrix', path: 'images/gallery/IMG20220525201247.jpg', type: 'image', date: 'May 25, 2022' }
+            { title: 'Autonomous Obstacle Avoidance Bot', path: 'images/gallery/IMG20220525213755.jpg', type: 'image', date: 'May 25, 2022' },
+            { title: 'Line Follower Robot Calibration', path: 'images/gallery/IMG20221125172021.jpg', type: 'image', date: 'Nov 25, 2022' },
+            { title: 'Robotics Workshop Team Assembly', path: 'images/gallery/IMG20230514190305.jpg', type: 'image', date: 'May 14, 2023' },
+            { title: 'Robot Arm Programming Session', path: 'images/gallery/IMG_20230612_131717.jpg', type: 'image', date: 'Jun 12, 2023' },
+            { title: 'Arduino LED Matrix Display Code', path: 'images/gallery/IMG20220526150634.jpg', type: 'image', date: 'May 26, 2022' },
+            { title: 'Multi-sensor Shield Debugging', path: 'images/gallery/IMG20221125172028.jpg', type: 'image', date: 'Nov 25, 2022' },
+            { title: 'Servo Motor Angle Control', path: 'images/gallery/VID-20220518-WA0000.mp4', type: 'video', date: 'May 18, 2022' },
+            { title: 'Node-RED Dashboard Configuration', path: 'images/gallery/IMG20220601224927.jpg', type: 'image', date: 'Jun 1, 2022' },
+            { title: 'ESP32 WiFi Web Server Lab', path: 'images/gallery/IMG20230224184202.jpg', type: 'image', date: 'Feb 24, 2023' },
+            { title: 'Smart Irrigation System Prep', path: 'images/gallery/VID-20220526-WA0020.mp4', type: 'video', date: 'May 26, 2022' },
+            { title: 'ESP32 WiFi Web Server Lab', path: 'images/gallery/IMG20230224221958.jpg', type: 'image', date: 'Feb 24, 2023' },
+            { title: 'MQTT Broker Communication Test', path: 'images/gallery/IMG20231102155050.jpg', type: 'image', date: 'Nov 2, 2023' },
+            { title: 'Smart Irrigation System Prep', path: 'images/gallery/VID-20220610-WA0008.mp4', type: 'video', date: 'Jun 10, 2022' },
+            { title: 'Circuit Continuity Multi-meter Test', path: 'images/gallery/IMG20220531155324.jpg', type: 'image', date: 'May 31, 2022' },
+            { title: 'Soldering Practice & Iron Safety', path: 'images/gallery/IMG20230611153327.jpg', type: 'image', date: 'Jun 11, 2023' },
+            { title: 'Desoldering & Troubleshooting PCBs', path: 'images/gallery/VID-20220518-WA0011.mp4', type: 'video', date: 'May 18, 2022' },
+            { title: 'SMD Soldering Demonstration', path: 'images/gallery/VID_20211021193833.mp4', type: 'video', date: 'Oct 21, 2021' },
+            { title: 'Robotics Arm Mechanism Design', path: 'images/gallery/IMG20220519195647.jpg', type: 'image', date: 'May 19, 2022' },
+            { title: 'Autonomous Obstacle Avoidance Bot', path: 'images/gallery/IMG20221016000723.jpg', type: 'image', date: 'Oct 16, 2022' },
+            { title: 'Line Follower Robot Calibration', path: 'images/gallery/IMG20230317214654.jpg', type: 'image', date: 'Mar 17, 2023' },
+            { title: 'Robot Arm Programming Session', path: 'images/gallery/VID20220607124714.mp4', type: 'video', date: 'Jun 7, 2022' },
+            { title: 'Innovation Lab Project Exhibition', path: 'images/gallery/IMG20220510201314.jpg', type: 'image', date: 'May 10, 2022' },
+            { title: 'National STEM Competition Day', path: 'images/gallery/IMG20220810094335.jpg', type: 'image', date: 'Aug 10, 2022' },
+            { title: 'Robot Racing Arena Trials', path: 'images/gallery/IMG20230225145228.jpg', type: 'image', date: 'Feb 25, 2023' },
+            { title: 'Arduino Project Presentation', path: 'images/gallery/IMG20230706142821.jpg', type: 'image', date: 'Jul 6, 2023' },
+            { title: 'Annual Tech Fest Showcase', path: 'images/gallery/VID-20220610-WA0013.mp4', type: 'video', date: 'Jun 10, 2022' },
+            { title: 'Ultrasonic Sensor Wiring & Testing', path: 'images/gallery/IMG20220525201247.jpg', type: 'image', date: 'May 25, 2022' },
+            { title: 'Arduino LED Matrix Display Code', path: 'images/gallery/IMG20221016000735.jpg', type: 'image', date: 'Oct 16, 2022' },
+            { title: 'Multi-sensor Shield Debugging', path: 'images/gallery/IMG20230514152701.jpg', type: 'image', date: 'May 14, 2023' },
+            { title: 'LCD Display Interface Workshop', path: 'images/gallery/IMG20230821152603.jpg', type: 'image', date: 'Aug 21, 2023' },
+            { title: 'Servo Motor Angle Control', path: 'images/gallery/VID20230224221850.mp4', type: 'video', date: 'Feb 24, 2023' }
           ]
         },
         {
-          _id: 'fallback-p2',
-          title: 'PCB Soldering',
-          category: 'PCB Soldering',
+          _id: 'fallback-p_industrial',
+          title: 'INDUSTRIAL AUTOMATION',
+          category: 'INDUSTRIAL AUTOMATION',
           size: 'tall',
-          coverPath: 'images/gallery/IMG20220217112105.jpg',
+          coverPath: 'images/gallery/IMG20230905172210.jpg',
           coverType: 'image',
           media: [
-            { title: 'Soldering Practice & Iron Safety', path: 'images/gallery/IMG20220217112105.jpg', type: 'image', date: 'Feb 17, 2022' },
-            { title: 'Soldering Resistors on Custom PCB', path: 'images/gallery/IMG20220525213755.jpg', type: 'image', date: 'May 25, 2022' }
+            { title: 'Gear Motor Transmission Testing', path: 'images/gallery/IMG20230905172210.jpg', type: 'image', date: 'Sep 5, 2023' },
+            { title: 'Chassis Development & Assembly', path: 'images/gallery/IMG20231004105318.jpg', type: 'image', date: 'Oct 4, 2023' },
+            { title: 'Analog Signal Read Calibration', path: 'images/gallery/IMG20230907180133.jpg', type: 'image', date: 'Sep 7, 2023' },
+            { title: 'Breadboard Circuit Basics', path: 'images/gallery/IMG20231004105334.jpg', type: 'image', date: 'Oct 4, 2023' },
+            { title: 'Smart Weather Station Prototype', path: 'images/gallery/IMG20230907180308.jpg', type: 'image', date: 'Sep 7, 2023' },
+            { title: 'MQTT Broker Communication Test', path: 'images/gallery/IMG20231102155042.jpg', type: 'image', date: 'Nov 2, 2023' },
+            { title: 'Smart Weather Station Prototype', path: 'images/gallery/IMG20230907180317.jpg', type: 'image', date: 'Sep 7, 2023' },
+            { title: 'Completed PCB Assembly Inspection', path: 'images/gallery/IMG20230907180304.jpg', type: 'image', date: 'Sep 7, 2023' },
+            { title: 'Through-Hole Soldering Technique', path: 'images/gallery/IMG20231102155031.jpg', type: 'image', date: 'Nov 2, 2023' },
+            { title: 'Gear Motor Transmission Testing', path: 'images/gallery/IMG20230911173320.jpg', type: 'image', date: 'Sep 11, 2023' },
+            { title: 'Chassis Development & Assembly', path: 'images/gallery/IMG20231110155250.jpg', type: 'image', date: 'Nov 10, 2023' },
+            { title: 'Winning Team Group Photo', path: 'images/gallery/IMG20230907180326.jpg', type: 'image', date: 'Sep 7, 2023' },
+            { title: 'STEM Project Design Defence', path: 'images/gallery/IMG20231106131808.jpg', type: 'image', date: 'Nov 6, 2023' },
+            { title: 'Analog Signal Read Calibration', path: 'images/gallery/IMG20230918155548.jpg', type: 'image', date: 'Sep 18, 2023' },
+            { title: 'Breadboard Circuit Basics', path: 'images/gallery/IMG20231204151832.jpg', type: 'image', date: 'Dec 4, 2023' }
           ]
         },
         {
-          _id: 'fallback-p3',
-          title: 'Innovation Lab Setup',
-          category: 'IoT & Smart Devices',
+          _id: 'fallback-p_home',
+          title: 'HOME AUTOMATION',
+          category: 'HOME AUTOMATION',
           size: 'medium',
-          coverPath: 'images/gallery/IMG20220215101303.jpg',
+          coverPath: 'images/gallery/IMG_20230612_131717.jpg',
           coverType: 'image',
           media: [
-            { title: 'Node-RED Dashboard Configuration', path: 'images/gallery/IMG20220215101303.jpg', type: 'image', date: 'Feb 15, 2022' },
-            { title: 'Smart Lighting Demo', path: 'images/gallery/VID-20220518-WA0011.mp4', type: 'video', date: 'May 18, 2022' }
+            { title: 'Robot Arm Programming Session', path: 'images/gallery/IMG_20230612_131717.jpg', type: 'image', date: 'Jun 12, 2023' },
+            { title: 'LCD Display Interface Workshop', path: 'images/gallery/IMG20230611153014.jpg', type: 'image', date: 'Jun 11, 2023' },
+            { title: 'SteriGuard Medical IoT Assembly', path: 'images/gallery/IMG20230706141406.jpg', type: 'image', date: 'Jul 6, 2023' },
+            { title: 'Soldering Practice & Iron Safety', path: 'images/gallery/IMG20230611153327.jpg', type: 'image', date: 'Jun 11, 2023' }
           ]
         },
         {
-          _id: 'fallback-p4',
-          title: 'Smart Home Project',
-          category: 'IoT & Smart Devices',
+          _id: 'fallback-p_robotics',
+          title: 'ROBOTICS',
+          category: 'ROBOTICS',
           size: 'small',
-          coverPath: 'images/gallery/IMG20220519195647.jpg',
+          coverPath: 'images/gallery/IMG20230612131543.jpg',
           coverType: 'image',
           media: [
-            { title: 'Smart Irrigation System Prep', path: 'images/gallery/IMG20220519195647.jpg', type: 'image', date: 'May 19, 2022' }
-          ]
-        },
-        {
-          _id: 'fallback-p5',
-          title: 'Competition Day',
-          category: 'Competitions',
-          size: 'medium',
-          coverPath: 'images/gallery/IMG20220217204604.jpg',
-          coverType: 'image',
-          media: [
-            { title: 'Winning Team Group Photo', path: 'images/gallery/IMG20220217204604.jpg', type: 'image', date: 'Feb 17, 2022' },
-            { title: 'National STEM Competition Day', path: 'images/gallery/IMG20220526150634.jpg', type: 'image', date: 'May 26, 2022' }
+            { title: 'SteriGuard Medical IoT Assembly', path: 'images/gallery/IMG20230612131543.jpg', type: 'image', date: 'Jun 12, 2023' }
           ]
         }
       ];
