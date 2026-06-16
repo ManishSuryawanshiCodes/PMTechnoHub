@@ -22,15 +22,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// MongoDB connection
-const mongoURI = process.env.MONGODB_URI;
-console.log('Connecting to MongoDB Atlas...');
-mongoose.connect(mongoURI)
-  .then(() => console.log('Successfully connected to MongoDB Atlas.'))
-  .catch(err => {
-    console.error('Error connecting to MongoDB Atlas:', err.message);
-    console.log('Server will continue running in static-fallback mode.');
-  });
+// Database connection will be initiated after the server binds to the port to avoid deployment timeouts.
 
 // Schema definition for Gallery Projects (containing multiple media files)
 const galleryProjectSchema = new mongoose.Schema({
@@ -82,4 +74,20 @@ app.listen(PORT, () => {
   console.log(`  PM TECHNO HUBB Server is running on port ${PORT}`);
   console.log(`  Local URL: http://localhost:${PORT}`);
   console.log(`===================================================`);
+
+  // Connect to MongoDB Atlas asynchronously after port binding to prevent deployment port scan timeouts
+  const mongoURI = process.env.MONGODB_URI;
+  if (!mongoURI) {
+    console.log('Warning: MONGODB_URI environment variable is not defined.');
+    console.log('Server will continue running in static-fallback mode.');
+    return;
+  }
+
+  console.log('Connecting to MongoDB Atlas...');
+  mongoose.connect(mongoURI)
+    .then(() => console.log('Successfully connected to MongoDB Atlas.'))
+    .catch(err => {
+      console.error('Error connecting to MongoDB Atlas:', err.message);
+      console.log('Server will continue running in static-fallback mode.');
+    });
 });
