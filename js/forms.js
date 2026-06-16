@@ -10,6 +10,10 @@ window.handleContact = async function (e) {
 
   if (!form) return;
   const formData = new FormData(form);
+  const data = {};
+  formData.forEach((value, key) => {
+    data[key] = value;
+  });
 
   if (submitBtn) submitBtn.disabled = true;
   if (submitBtnText) submitBtnText.textContent = 'Sending...';
@@ -19,8 +23,9 @@ window.handleContact = async function (e) {
   try {
     const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
       method: 'POST',
-      body: formData,
+      body: JSON.stringify(data),
       headers: {
+        'Content-Type': 'application/json',
         'Accept': 'application/json'
       }
     });
