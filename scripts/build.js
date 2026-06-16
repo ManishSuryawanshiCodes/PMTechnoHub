@@ -29,3 +29,53 @@ try {
   console.error('[Build Script] Failed to write config file:', error);
   process.exit(1);
 }
+
+// Copy all frontend assets to the 'public' directory which Vercel expects
+const publicDir = path.join(__dirname, '../public');
+
+// Clear public directory if it exists
+if (fs.existsSync(publicDir)) {
+  fs.rmSync(publicDir, { recursive: true, force: true });
+}
+fs.mkdirSync(publicDir, { recursive: true });
+
+// Helper to copy file or folder recursively
+function copyRecursive(src, dest) {
+  const stats = fs.statSync(src);
+  if (stats.isDirectory()) {
+    fs.mkdirSync(dest, { recursive: true });
+    const files = fs.readdirSync(src);
+    for (const file of files) {
+      copyRecursive(path.join(src, file), path.join(dest, file));
+    }
+  } else {
+    fs.copyFileSync(src, dest);
+  }
+}
+
+// List of files and folders to copy
+const assetsToCopy = [
+  'index.html',
+  'about.html',
+  'contact.html',
+  'partnerships.html',
+  'products.html',
+  'services.html',
+  'workshops.html',
+  'robots.txt',
+  'sitemap.xml',
+  'js',
+  'css',
+  'images'
+];
+
+console.log('[Build Script] Copying frontend assets to public output directory...');
+for (const asset of assetsToCopy) {
+  const srcPath = path.join(__dirname, '..', asset);
+  const destPath = path.join(publicDir, asset);
+  if (fs.existsSync(srcPath)) {
+    copyRecursive(srcPath, destPath);
+    console.log(` - Copied: ${asset}`);
+  }
+}
+console.log('[Build Script] Copying completed successfully!');

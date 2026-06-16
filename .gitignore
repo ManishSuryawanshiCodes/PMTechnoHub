@@ -11,3 +11,5 @@ images/gallery/VID20230303172831.mp4
 # Temporary scratch directories
 scratch/
 
+# Build outputs
+public/
