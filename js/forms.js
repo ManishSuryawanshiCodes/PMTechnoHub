@@ -14,8 +14,10 @@ window.handleContact = async function (e) {
   if (submitBtn) submitBtn.disabled = true;
   if (submitBtnText) submitBtnText.textContent = 'Sending...';
 
+  const formspreeId = (window.ENV_CONFIG && window.ENV_CONFIG.FORMSPREE_ID) || 'mgobpqpn';
+
   try {
-    const response = await fetch('https://formspree.io/f/mgobpqpn', {
+    const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
       method: 'POST',
       body: formData,
       headers: {
@@ -27,13 +29,25 @@ window.handleContact = async function (e) {
       form.style.display = 'none';
       if (success) success.style.display = 'block';
     } else {
-      const data = await response.json();
-      alert(data.errors ? data.errors.map(err => err.message).join(', ') : 'Oops! There was a problem submitting your form.');
+      let errorMessage = 'Oops! There was a problem submitting your form.';
+      try {
+        const data = await response.json();
+        if (data && data.errors) {
+          errorMessage = data.errors.map(err => err.message).join(', ');
+        }
+      } catch (jsonErr) {
+        if (response.status === 404) {
+          errorMessage = 'The contact form endpoint was not found (404). Please verify that your Formspree ID is correct.';
+        } else if (response.status === 403) {
+          errorMessage = 'The contact form submission was forbidden (403). Make sure your domain is allowed in your Formspree form settings.';
+        }
+      }
+      alert(errorMessage);
       if (submitBtn) submitBtn.disabled = false;
       if (submitBtnText) submitBtnText.textContent = 'Send Message';
     }
   } catch (err) {
-    alert('Oops! There was a problem connecting to the server. Please try again later.');
+    alert('Oops! There was a problem connecting to the server. Please check your internet connection and try again.');
     if (submitBtn) submitBtn.disabled = false;
     if (submitBtnText) submitBtnText.textContent = 'Send Message';
   }
