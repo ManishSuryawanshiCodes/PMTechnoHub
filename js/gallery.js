@@ -33,7 +33,10 @@
   async function initGallery() {
     try {
       console.log('Fetching projects from MongoDB API...');
-      const response = await fetch('/api/gallery');
+      const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+      const defaultApiUrl = isLocal ? '' : 'https://pm-techno-hubb.onrender.com';
+      const apiBaseUrl = (window.ENV_CONFIG && window.ENV_CONFIG.API_URL) || defaultApiUrl;
+      const response = await fetch(`${apiBaseUrl}/api/gallery`);
       if (!response.ok) throw new Error('API response not OK');
       
       const data = await response.json();
